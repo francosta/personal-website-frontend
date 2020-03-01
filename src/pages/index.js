@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import styles from "../styles/index.scss"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
