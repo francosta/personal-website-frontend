@@ -15,4 +15,8 @@
   display: flex;
   justify-content: space-evenly;
   list-style: none;
+
+  a {
+    text-decoration: none;
+  }
 }
