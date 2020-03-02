@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh;
+}
+
+#logo {
+  flex: 1 1 20rem;
+}
+
+.navbar-links {
+  flex: 1 1 20rem;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
