@@ -1,9 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
+import Navbar from "./navbar"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <nav>This will be the nav</nav>
+    <Navbar />
   </header>
 )
 
