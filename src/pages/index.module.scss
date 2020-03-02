@@ -1,0 +1,12 @@
+.post-list {
+  animation: opening 1s ease-in-out;
+}
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
