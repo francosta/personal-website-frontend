@@ -12,7 +12,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
   if (node.internal.type === "ContentfulBlogPost") {
     const sluggedTitle = node.title.replace(/\s+/g, "-").toLowerCase()
-    const slug = `blog-${sluggedTitle}`
+    const slug = sluggedTitle
     createNodeField({
       node,
       name: "slug",

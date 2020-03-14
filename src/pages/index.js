@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,6 +23,9 @@ const IndexPage = () => {
             body {
               body
             }
+            fields {
+              slug
+            }
           }
         }
       }
@@ -36,7 +39,14 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className={indexStyles.postList}>
         {posts.map((post, index) => {
-          return <h1 key={index}>{post.node.title}</h1>
+          {
+            console.log(post)
+          }
+          return (
+            <Link to={`/blog/${post.node.fields.slug}`}>
+              <h1 key={index}>{post.node.title}</h1>
+            </Link>
+          )
         })}
       </div>
     </Layout>
