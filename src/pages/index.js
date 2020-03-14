@@ -17,7 +17,6 @@ const IndexPage = () => {
             author {
               name
             }
-            slug
             description {
               description
             }
