@@ -9,20 +9,19 @@ import indexStyles from "./index.module.scss"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost {
+      allStrapiBlogPost {
         edges {
           node {
-            title
-            publishDate
-            author {
-              name
+            Hero {
+              Image {
+                url
+              }
+              AltText
             }
-            description {
-              description
-            }
-            body {
-              body
-            }
+            Title
+            PublishedDate
+            Description
+            Body
             fields {
               slug
             }
@@ -31,20 +30,16 @@ const IndexPage = () => {
       }
     }
   `)
-
-  const posts = data.allContentfulBlogPost.edges
-
+  const posts = data.allStrapiBlogPost.edges
   return (
     <Layout>
       <SEO title="Home" />
+      {console.log(posts)}
       <div className={indexStyles.postList}>
         {posts.map((post, index) => {
-          {
-            console.log(post)
-          }
           return (
-            <Link to={`/blog/${post.node.fields.slug}`}>
-              <h1 key={index}>{post.node.title}</h1>
+            <Link to={`/blog/${post.node.fields.slug}`} key={index}>
+              <h1>{post.node.Title}</h1>
             </Link>
           )
         })}
