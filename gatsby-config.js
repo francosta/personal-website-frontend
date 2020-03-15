@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Dev Fran`,
     description: `Dev Fran - This is my personal website.`,
-    author: `Francsico Cosra`,
+    author: `Francsico Costa`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,10 +17,11 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-plugin-sass",
     {
-      resolve: "gatsby-source-contentful",
+      resolve: `gatsby-source-strapi`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        apiURL: process.env.API_URL,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`Blog-Post`],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
