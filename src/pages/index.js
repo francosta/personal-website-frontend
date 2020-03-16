@@ -12,16 +12,16 @@ const IndexPage = () => {
       allStrapiBlogPost {
         edges {
           node {
-            Hero {
-              Image {
+            hero {
+              image {
                 url
               }
-              AltText
+              altText
             }
-            Title
-            PublishedDate
-            Description
-            Body
+            title
+            publishedDate
+            description
+            body
             fields {
               slug
             }

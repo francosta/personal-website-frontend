@@ -11,7 +11,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
   //   // we are creating a new field in each of the nodes for the slug, which will take the name of the file.
 
   if (node.internal.type === "StrapiBlogPost") {
-    const sluggedTitle = node.Title.replace(/\s+/g, "-").toLowerCase()
+    const sluggedTitle = node.title.replace(/\s+/g, "-").toLowerCase()
     const slug = sluggedTitle
     createNodeField({
       node,
