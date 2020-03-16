@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL,
+        apiURL: "http://localhost:1337",
         queryLimit: 1000, // Default to 100
         contentTypes: [`Blog-Post`],
       },
