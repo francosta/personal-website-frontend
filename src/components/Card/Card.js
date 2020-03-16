@@ -1,6 +1,6 @@
 import React from "react"
 const path = require("path")
-const env = require("dotenv").config({ path: `${path.resolve()}/.env` })
+const env = require("dotenv").config()
 
 const Card = ({ post }) => {
   return (
