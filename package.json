@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "env-cmd": "^10.1.0",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
@@ -31,7 +32,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "dev": "env-cmd -f .env gatsby develop",
+    "dev": "env-cmd gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
