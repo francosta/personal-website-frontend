@@ -1,7 +1,14 @@
+.container {
+  max-width: 30vw;
+  border: black 3px;
+  display: flex;
+  flex-direction: column;
+}
+
 .image {
-  max-width: 10vh;
+  max-width: 300px;
 }
 
 .text {
-  color: yellow;
+  flex-wrap: wrap;
 }
