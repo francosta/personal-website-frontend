@@ -1,15 +1,16 @@
 import React from "react"
-const path = require("path")
-const env = require("dotenv").config()
+
+import cardStyles from "./card.module.scss"
 
 const Card = ({ post }) => {
   return (
     <div>
-      {/* <img
+      <img
+        className={cardStyles.image}
         src={`${process.env.API_URL}${post.node.hero.image.url}`}
         alt={post.node.hero.image.altText}
-      /> */}
-      <p>{`${process.env.API_URL}${post.node.hero.image.url}`}</p>
+      />
+      <p className={cardStyles.text}>{post.node.title}</p>
     </div>
   )
 }
