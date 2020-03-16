@@ -5,6 +5,7 @@ import Layout from "../components/Layout/layout"
 import SEO from "../components/seo"
 import styles from "../styles/index.scss"
 import indexStyles from "./index.module.scss"
+import Card from "../components/Card/Card"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -38,9 +39,10 @@ const IndexPage = () => {
       <div className="post-list">
         {posts.map((post, index) => {
           return (
-            <Link to={`/blog/${post.node.fields.slug}`} key={index}>
-              <h1>{post.node.title}</h1>
-            </Link>
+            <Card key={index} post={post}></Card>
+            // <Link to={`/blog/${post.node.fields.slug}`} key={index}>
+            //   <h1>{post.node.title}</h1>
+            // </Link>
           )
         })}
       </div>

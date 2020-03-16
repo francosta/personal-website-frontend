@@ -2,7 +2,6 @@ const path = require("path")
 
 // // We will use the onCreateNode function from the Gatsby API.
 // // As the name suggests, this function will run each time a node is created.
-
 module.exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
