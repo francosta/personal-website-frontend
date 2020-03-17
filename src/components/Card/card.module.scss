@@ -1,8 +1,7 @@
 .container {
-  width: 90;
-  margin: auto;
+  margin: 0;
   display: flex;
-  min-height: 80vh;
+  margin-top: 40px;
   align-items: center;
   flex-wrap: wrap; /* This will make the cards responsive */
 }
@@ -20,7 +19,6 @@
   //   flex: 1 1 25rem;
   width: 20rem;
   min-height: 30vh;
-  margin: 2rem 5rem;
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
