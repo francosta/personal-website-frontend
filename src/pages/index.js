@@ -20,7 +20,7 @@ const IndexPage = () => {
               altText
             }
             title
-            publishedDate
+            publishedDate(formatString: "DD MMMM YYYY")
             description
             body
             fields {
