@@ -1,18 +1,10 @@
-// .card {
-//   text-align: center;
-//   //   flex: 1 1 25rem;
-//   width: 20rem;
-//   min-height: 30vh;
-//   border-radius: 1rem;
-//   padding: 2rem;
-//   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
-// }
-
 .card {
   margin: 0 2rem 0 2rem;
   align-items: center;
-  // max-height: 40vh;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .card1 {
@@ -51,7 +43,8 @@
   line-height: 15px;
   align-items: center;
   color: #8f8f8f;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 840px) {
