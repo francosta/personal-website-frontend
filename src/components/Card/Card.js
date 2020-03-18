@@ -8,7 +8,7 @@ const Card = ({ index, post }) => {
     return (
       <div className={`${cardStyles.card} ${cardStyles.card1} `}>
         {console.log(post)}
-        <Link to={`/`}>
+        <Link to={`${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
             src={`${process.env.API_URL}${post.hero.image.url}`}
@@ -33,9 +33,15 @@ const Card = ({ index, post }) => {
         />
         <h1 className={cardStyles.postTitle}>{post.title}</h1>
         <h6 className={cardStyles.description}>{post.description}</h6>
-        <div className={cardStyles.details}>
-          <p>Blog Post</p> &middot; <p>{post.publishedDate}</p>
-        </div>
+        {post.fields.type === "blog" ? (
+          <div className={cardStyles.details}>
+            <p>Blog Post</p> &middot; <p>{post.publishedDate}</p>
+          </div>
+        ) : (
+          <div className={cardStyles.details}>
+            <p>Project</p> &middot; <p>{post.publishedDate}</p>
+          </div>
+        )}
       </div>
     )
   }
