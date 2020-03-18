@@ -17,6 +17,11 @@ module.exports.onCreateNode = ({ node, actions }) => {
       name: "slug",
       value: slug,
     })
+    createNodeField({
+      node,
+      name: "type",
+      value: "blog",
+    })
   }
 }
 
@@ -31,11 +36,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const resp = await graphql(`
     query {
       allStrapiBlogPost {
-        edges {
-          node {
-            fields {
-              slug
-            }
+        nodes {
+          fields {
+            slug
           }
         }
       }
@@ -45,12 +48,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
   console.log(resp)
 
   //   //   // We will now create a page for each of the nodes in the response from the query.
-  resp.data.allStrapiBlogPost.edges.forEach(post => {
+  resp.data.allStrapiBlogPost.nodes.forEach(post => {
     createPage({
       component: blogTemplate,
-      path: `/blog/${post.node.fields.slug}`,
+      path: `/blog/${post.fields.slug}`,
       context: {
-        slug: post.node.slug, //We are injecting the slug of the post in the context of the page.
+        slug: post.slug, //We are injecting the slug of the post in the context of the page.
       },
     })
   })

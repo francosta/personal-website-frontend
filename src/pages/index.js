@@ -11,27 +11,26 @@ const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
       allStrapiBlogPost {
-        edges {
-          node {
-            hero {
-              image {
-                url
-              }
-              altText
+        nodes {
+          hero {
+            image {
+              url
             }
-            title
-            publishedDate(formatString: "DD MMMM YYYY")
-            description
-            body
-            fields {
-              slug
-            }
+            altText
+          }
+          title
+          publishedDate(formatString: "DD MMMM YYYY")
+          description
+          body
+          fields {
+            slug
+            type
           }
         }
       }
     }
   `)
-  const posts = data.allStrapiBlogPost.edges
+  const posts = data.allStrapiBlogPost.nodes
 
   return (
     <Layout>
