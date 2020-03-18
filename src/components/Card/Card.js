@@ -15,7 +15,7 @@ const Card = ({ index, post }) => {
         <h1 className={cardStyles.postTitle}>{post.node.title}</h1>
         <h6 className={cardStyles.description}>{post.node.description}</h6>
         <div className={cardStyles.details}>
-          <p>Blog Post</p>
+          <p className={cardStyles.postType}>Blog Post</p> &middot;
           <p>{post.node.publishedDate}</p>
         </div>
       </div>
@@ -31,8 +31,7 @@ const Card = ({ index, post }) => {
         <h1 className={cardStyles.postTitle}>{post.node.title}</h1>
         <h6 className={cardStyles.description}>{post.node.description}</h6>
         <div className={cardStyles.details}>
-          <p>Blog Post</p>
-          <p>{post.node.publishedDate}</p>
+          <p>Blog Post</p> &middot; <p>{post.node.publishedDate}</p>
         </div>
       </div>
     )
