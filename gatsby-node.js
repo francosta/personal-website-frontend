@@ -37,8 +37,19 @@ module.exports.createPages = async ({ graphql, actions }) => {
     query {
       allStrapiBlogPost {
         nodes {
+          hero {
+            image {
+              url
+            }
+            altText
+          }
+          title
+          publishedDate(formatString: "DD MMMM YYYY")
+          description
+          body
           fields {
             slug
+            type
           }
         }
       }
@@ -53,6 +64,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
       component: blogTemplate,
       path: `/blog/${post.fields.slug}`,
       context: {
+        post: post,
         slug: post.slug, //We are injecting the slug of the post in the context of the page.
       },
     })
