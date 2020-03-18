@@ -4,3 +4,9 @@
   /* Repeat the same size (1fr), 3 times */
   grid-template-columns: repeat(3, 1fr);
 }
+
+@media screen and (max-width: 840px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}
