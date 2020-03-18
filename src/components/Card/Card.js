@@ -6,13 +6,18 @@ const Card = ({ index, post }) => {
   if (index % 2 === 0 || index === 0) {
     return (
       <div className={`${cardStyles.card} ${cardStyles.card1} `}>
+        {console.log(post)}
         <img
           className={cardStyles.image}
           src={`${process.env.API_URL}${post.node.hero.image.url}`}
           alt={post.node.hero.image.altText}
         />
-        <h1>{post.node.title}</h1>
-        <h6>{post.node.description}</h6>
+        <h1 className={cardStyles.postTitle}>{post.node.title}</h1>
+        <h6 className={cardStyles.description}>{post.node.description}</h6>
+        <div className={cardStyles.details}>
+          <p>Blog Post</p>
+          <p>{post.node.publishedDate}</p>
+        </div>
       </div>
     )
   } else {
@@ -23,10 +28,11 @@ const Card = ({ index, post }) => {
           src={`${process.env.API_URL}${post.node.hero.image.url}`}
           alt={post.node.hero.image.altText}
         />
-        <h1>{post.node.title}</h1>
-        <h6>{post.node.description}</h6>
+        <h1 className={cardStyles.postTitle}>{post.node.title}</h1>
+        <h6 className={cardStyles.description}>{post.node.description}</h6>
         <div className={cardStyles.details}>
-          
+          <p>Blog Post</p>
+          <p>{post.node.publishedDate}</p>
         </div>
       </div>
     )
