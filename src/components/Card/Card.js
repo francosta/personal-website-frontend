@@ -2,18 +2,19 @@ import React from "react"
 
 import cardStyles from "./card.module.scss"
 
-const Card = ({ post }) => {
+const Card = ({ key, post }) => {
   return (
-    <div className={cardStyles.container}>
-      <div className={cardStyles.card}>
-        <img
-          className={cardStyles.image}
-          src={`${process.env.API_URL}${post.node.hero.image.url}`}
-          alt={post.node.hero.image.altText}
-        />
-        <h4 className={cardStyles.text}>{post.node.title}</h4>
-      </div>
+    // <div className={cardStyles.container}>
+    //   <div className={cardStyles.card}>
+    <div className={cardStyles.card2}>
+      <img
+        className={cardStyles.image}
+        src={`${process.env.API_URL}${post.node.hero.image.url}`}
+        alt={post.node.hero.image.altText}
+      />
+      {/* <h4 className={cardStyles.text}>{post.node.title}</h4> */}
     </div>
+    // </div>
   )
 }
 
