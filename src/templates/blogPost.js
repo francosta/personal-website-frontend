@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout/layout"
+import Post from "../components/Post/Post"
 
-const BlogPost = () => {
+const BlogPost = ({ pageContext }) => {
   return (
     <Layout>
-      <h1>this will be a blog post page</h1>
+      {console.log(pageContext)}
+      <Post post={pageContext.post} />
     </Layout>
   )
 }
