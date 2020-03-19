@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,4 +23,22 @@ h6 {
 
 .landing {
   min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.introduction {
+  min-height: 75vh;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  transform: translate(-50%, 0%, -50%, 0);
+}
+
+.goToPosts {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
