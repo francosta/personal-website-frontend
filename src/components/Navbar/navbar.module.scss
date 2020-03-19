@@ -1,24 +1,38 @@
 .navbar {
   display: flex;
-  // width: 90%;
-  margin: auto;
-  margin-bottom: 5rem;
+  justify-content: space-between;
   align-items: center;
   min-height: 10vh;
+  margin: 0 0 5rem 0;
+  flex-wrap: wrap;
   border-bottom: 2px solid #c5c5c5;
 }
 
-#logo {
+.logo {
   flex: 1 1 20rem;
+
+  h1 {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+  }
 }
 
 .navbar-links {
-  flex: 1 1 20rem;
+  flex: 1 1 40rem;
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   list-style: none;
 
   a {
     text-decoration: none;
+    font-size: 24px;
+    color: black;
+  }
+
+  a:hover {
+    color: #6a6a6a;
   }
 }
