@@ -35,6 +35,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <section>
+        <div className={indexStyles.landing}></div>
+      </section>
       <CardGrid posts={posts} />
     </Layout>
   )
