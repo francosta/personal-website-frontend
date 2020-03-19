@@ -5,10 +5,18 @@ import navbarStyles from "./navbar.module.scss"
 const Navbar = () => {
   return (
     <nav className={navbarStyles.navbar}>
-      <h1 id={navbarStyles.logo}>Francisco Costa</h1>
+      <div className={navbarStyles.logo}>
+        <h1 id={navbarStyles.logo}>Francisco Costa</h1>
+      </div>
       <ul className={navbarStyles.navbarLinks}>
         <li>
           <Link to="/">About</Link>
+        </li>
+        <li>
+          <Link to="/">Blog</Link>
+        </li>
+        <li>
+          <Link to="/">Projects</Link>
         </li>
         <li>
           <Link to="/">Contact</Link>
