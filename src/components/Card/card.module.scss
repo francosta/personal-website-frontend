@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  flex-wrap: wrap;
 
   a {
     text-decoration: none;
@@ -41,15 +43,13 @@
 
 .details {
   display: flex;
-  font-family: Poppins;
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
-  line-height: 15px;
   align-items: center;
   color: #8f8f8f;
-  justify-content: space-around;
   margin-bottom: 0.5rem;
+  position: absolute;
+  bottom: 0%;
 }
 
 @media screen and (max-width: 840px) {
