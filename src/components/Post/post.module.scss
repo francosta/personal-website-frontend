@@ -1,3 +1,26 @@
-.post {
-  width: 80vw;
+.container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  max-width: 100%;
+  max-height: 30vh;
+  object-fit: cover;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 2rem 0;
+}
+
+.body {
+  font-style: light;
+  font-weight: normal;
+  font-size: 20px;
+  text-align: justify;
 }
