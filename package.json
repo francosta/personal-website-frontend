@@ -17,7 +17,7 @@
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-source-strapi": "^0.0.11",
+    "gatsby-source-strapi-v2": "^0.0.15",
     "gatsby-transformer-sharp": "^2.3.13",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",

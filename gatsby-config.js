@@ -17,11 +17,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-plugin-sass",
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: `gatsby-source-strapi-v2`,
       options: {
         apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
         contentTypes: [`Blog-Post`],
+        singleTypes: [`About`],
       },
     },
     {
