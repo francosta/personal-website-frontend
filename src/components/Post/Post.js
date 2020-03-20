@@ -3,6 +3,7 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 
 import postStyles from "./post.module.scss"
+import ReactMarkdown from "react-markdown"
 
 const Post = ({ post }) => {
   return (
@@ -13,7 +14,8 @@ const Post = ({ post }) => {
         alt={post.hero.image.altText}
       />
       <h1 className={postStyles.title}>{post.title}</h1>
-      <ReactMarkdown className={postStyles.body} source={post.body} />
+      <h2 className={postStyles.description}>{post.description}</h2>
+      <ReactMarkdown source={post.body} />
     </div>
   )
 }

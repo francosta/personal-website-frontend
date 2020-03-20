@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   width: 85%;
   margin: auto;
@@ -9,18 +10,39 @@
   max-width: 100%;
   max-height: 30vh;
   object-fit: cover;
+=======
+.post {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+>>>>>>> 623346f6a5ff1f4f0e67a79925e126636cf48583
 }
 
 .title {
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  margin: 2rem 0;
+  font-size: 3rem;
+  margin: 1rem 0;
 }
 
-.body {
-  font-style: light;
+.description {
+  font-style: italic;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 2rem;
+  color: #525252;
+  margin: 1rem 0;
+}
+
+img {
+  object-fit: cover;
+  max-height: 20vh;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
   text-align: justify;
+  margin: 1rem 0;
 }
