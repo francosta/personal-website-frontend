@@ -3,7 +3,6 @@
   /* We want to have three columns */
   /* Repeat the same size (1fr), 3 times */
   grid-template-columns: repeat(3, 1fr);
-  min-height: 80vh;
 }
 
 @media screen and (max-width: 840px) {
