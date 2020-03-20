@@ -10,7 +10,7 @@ const Navbar = () => {
       </div>
       <ul className={navbarStyles.navbarLinks}>
         <li>
-          <Link to="/">About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
           <Link to="/">Blog</Link>
