@@ -3,7 +3,6 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 
 import postStyles from "./post.module.scss"
-import ReactMarkdown from "react-markdown"
 
 const Post = ({ post }) => {
   return (
