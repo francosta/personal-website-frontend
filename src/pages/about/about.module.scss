@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  max-width: 70vw;
+  flex-wrap: wrap;
+}
+
+.profile-picture {
+  flex: 1 1 20rem;
+  padding-right: 96px;
+}
+
+.about-text {
+  flex: 1 1 20rem;
+  border-left: 1px solid #c5c5c5;
+  padding-left: 96px;
+}
