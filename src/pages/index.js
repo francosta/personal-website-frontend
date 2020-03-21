@@ -28,9 +28,14 @@ const IndexPage = () => {
           }
         }
       }
+      strapiLandingPage {
+        landingText
+      }
     }
   `)
+
   const posts = data.allStrapiBlogPost.nodes
+  const landingText = data.strapiLandingPage.landingText
 
   return (
     <Layout>
@@ -38,7 +43,7 @@ const IndexPage = () => {
       <section id="landing">
         <div className={indexStyles.landing}>
           <div className={indexStyles.introduction}>
-            <p>I'm Fran and I am a Full Stack Developer</p>
+            <p>{landingText}</p>
           </div>
           <a href="#posts" className={indexStyles.goToPosts}>
             <svg
