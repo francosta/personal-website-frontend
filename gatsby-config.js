@@ -22,7 +22,7 @@ module.exports = {
         apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
         contentTypes: [`Blog-Post`],
-        singleTypes: [`About`],
+        singleTypes: [`About`, `Landing-Page`],
       },
     },
     {
