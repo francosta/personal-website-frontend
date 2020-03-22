@@ -1,3 +1,9 @@
+@mixin computer {
+  @media (min-width: 848px) {
+    @content;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -41,5 +47,50 @@
 
   a:hover {
     color: #6a6a6a;
+  }
+}
+
+#hamburger {
+  margin: 1rem;
+  justify-self: end; //We want the hamburger to appear on the right end, where users will be expecting it.
+  display: block;
+  background: white;
+  border: none;
+  font-size: 1, 2rem;
+  line-height: 1;
+  #expanded {
+    display: none;
+  }
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  span {
+    font-variant: small-caps;
+    display: block;
+    // position: relative;
+    top: 15px;
+  }
+
+  @include computer {
+    display: none;
+  }
+
+  &[aria-expanded="true"] {
+    color: black;
+
+    svg {
+      background-color: red;
+      fill: black;
+    }
+
+    span {
+      position: static;
+    }
+
+    #expanded {
+      display: block;
+    }
   }
 }

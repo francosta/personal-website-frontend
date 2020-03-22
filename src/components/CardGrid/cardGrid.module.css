@@ -1,0 +1,17 @@
+.card-grid {
+  display: -ms-grid;
+  display: grid;
+  /* We want to have three columns */
+  /* Repeat the same size (1fr), 3 times */
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding-top: 20vh;
+}
+
+@media screen and (max-width: 840px) {
+  .card-grid {
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+}
+/*# sourceMappingURL=cardGrid.module.css.map */
