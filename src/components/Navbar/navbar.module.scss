@@ -101,3 +101,7 @@
     display: flex;
   }
 }
+
+#hamburger[aria-expanded="true"] + .navbar-links {
+  display: block;
+}
