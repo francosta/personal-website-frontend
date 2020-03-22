@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h6 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #525252;
+}
+
+.landing {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 100vh;
+}
+
+.introduction {
+  min-height: 75vh;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  transform: translate(-50%, 0%, -50%, 0);
+}
+
+.goToPosts {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

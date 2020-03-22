@@ -1,0 +1,34 @@
+.post {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.description {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 2rem;
+  color: #525252;
+  margin: 1rem 0;
+}
+
+img {
+  object-fit: cover;
+  max-height: 20vh;
+}
+
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  text-align: justify;
+  margin: 1rem 0;
+}
