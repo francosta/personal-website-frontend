@@ -94,3 +94,10 @@
     }
   }
 }
+
+.js-enabled .navbar-links {
+  display: none;
+  @include computer {
+    display: flex;
+  }
+}

@@ -3,14 +3,28 @@ import { Link } from "gatsby"
 import navbarStyles from "./navbar.module.scss"
 
 const Navbar = () => {
+  // document.body.classList.toggle("js-enabled")
+  document.addEventListener("DOMContentLoaded", function(event) {
+    let hamburger = document.getElementById("hamburger")
+    hamburger.setAttribute("aria-expanded", "false")
+
+    hamburger.onclick = function() {
+      if (this.getAttribute("aria-expanded") == "false") {
+        this.setAttribute("aria-expanded", "true")
+      } else {
+        this.setAttribute("aria-expanded", "false")
+      }
+    }
+  })
+
   return (
-    <nav className={navbarStyles.navbar}>
+    <nav className={`${navbarStyles.navbar} ${navbarStyles.jsEnabled}`}>
       <div className={navbarStyles.logo}>
         <Link to="/">
           <h1 id={navbarStyles.logo}>Francisco Costa</h1>
         </Link>
       </div>
-      <button id={navbarStyles.hamburger} aria-expanded="false">
+      <button id={navbarStyles.hamburger} aria-expanded="true">
         <span>menu</span>
         <span id={navbarStyles.expanded}>expanded</span>
         <svg
