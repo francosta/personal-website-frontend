@@ -24,6 +24,11 @@ const Navbar = () => {
           <Link to="/">Contact</Link>
         </li>
       </ul>
+      <div className={navbarStyles.burger}>
+        <div className={navbarStyles.line1}></div>
+        <div className={navbarStyles.line1}></div>
+        <div className={navbarStyles.line1}></div>
+      </div>
     </nav>
   )
 }

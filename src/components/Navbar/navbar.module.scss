@@ -49,3 +49,14 @@
     color: #6a6a6a;
   }
 }
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 5px;
+  margin: 5px;
+  background-color: black;
+}
