@@ -56,42 +56,39 @@
 
 .burger div {
   width: 25px;
-  height: 5px;
-  margin: 5px;
+  height: 3px;
   background-color: black;
+  margin: 5px;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
+@media screen and (max-width: 850px) {
   .navbar-links {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0vh;
-    right: 0px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in;
-    z-index: 2;
-  }
-
-  .navbar-links li {
-    // opacity: 0;
+    display: none;
   }
 
   .burger {
     display: block;
-    cursor: pointer;
-    z-index: 2;
+    z-index: 1;
   }
 }
 
-.nav-active {
-  transform: translateX(100%);
+.navbar-links.navbar-active {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  top: 0vh;
+  justify-content: center;
+  background-color: white;
+
+  li {
+    margin: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-links {
+    flex: 1 1 30rem;
+  }
 }
