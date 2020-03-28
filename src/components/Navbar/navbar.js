@@ -4,14 +4,9 @@ import navbarStyles from "./navbar.module.scss"
 
 const Navbar = () => {
   const activateResponsiveMenu = () => {
-    console.log("Running!")
     const navbarLinks = document.querySelector("#navbarLinks")
     navbarLinks.classList.toggle(navbarStyles.navbarActive)
   }
-
-  // burger.addEventListener("click", () => {
-  //   activateResponsiveMenu()
-  // })
 
   return (
     <nav className={`${navbarStyles.navbar}`}>
@@ -34,11 +29,7 @@ const Navbar = () => {
           <Link to="/">Contact</Link>
         </li>
       </ul>
-      <div
-        id="burger"
-        onClick={activateResponsiveMenu}
-        className={navbarStyles.burger}
-      >
+      <div onClick={activateResponsiveMenu} className={navbarStyles.burger}>
         <div className={navbarStyles.line1}></div>
         <div className={navbarStyles.line2}></div>
         <div className={navbarStyles.line3}></div>
