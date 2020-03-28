@@ -83,7 +83,7 @@
   top: 0vh;
   justify-content: center;
   background-color: white;
-  animation: fadein 0.5s;
+  transition: transform 2s ease-in;
 
   li {
     margin: 3rem;
@@ -105,13 +105,12 @@
   }
   .navbar-links {
     display: none;
-    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in-out;
   }
 }
 
 .clicked .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
-  // transition: transform 0.5s;
 }
 
 .clicked .line2 {
@@ -120,5 +119,4 @@
 
 .clicked .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
-  // transition: transform 0.5s;
 }
