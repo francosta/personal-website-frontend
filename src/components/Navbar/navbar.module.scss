@@ -52,6 +52,7 @@
 
 .burger {
   display: none;
+  cursor: pointer;
 }
 
 .burger div {
@@ -59,10 +60,21 @@
   height: 3px;
   background-color: black;
   margin: 5px;
+  transition: all 0.3s ease;
 }
 
 // Active responsive menu
-.navbar-links.navbar-active {
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navbar-links.navbar-responsive {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -71,13 +83,21 @@
   top: 0vh;
   justify-content: center;
   background-color: white;
+  animation: fadein 0.5s;
 
   li {
     margin: 3rem;
+    opacity: 10;
   }
 }
 
 // Media queries
+@media screen and (max-width: 1200px) {
+  .navbar-links {
+    flex: 1 1 30rem;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .burger {
     display: block;
@@ -85,11 +105,20 @@
   }
   .navbar-links {
     display: none;
+    transition: transform 0.5s ease-in;
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .navbar-links {
-    flex: 1 1 30rem;
-  }
+.clicked .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  // transition: transform 0.5s;
+}
+
+.clicked .line2 {
+  opacity: 0;
+}
+
+.clicked .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  // transition: transform 0.5s;
 }
