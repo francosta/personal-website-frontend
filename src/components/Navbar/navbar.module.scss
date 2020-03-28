@@ -61,17 +61,7 @@
   margin: 5px;
 }
 
-@media screen and (max-width: 850px) {
-  .navbar-links {
-    display: none;
-  }
-
-  .burger {
-    display: block;
-    z-index: 1;
-  }
-}
-
+// Active responsive menu
 .navbar-links.navbar-active {
   display: flex;
   position: absolute;
@@ -84,6 +74,17 @@
 
   li {
     margin: 3rem;
+  }
+}
+
+// Media queries
+@media screen and (max-width: 850px) {
+  .burger {
+    display: block;
+    z-index: 1;
+  }
+  .navbar-links {
+    display: none;
   }
 }
 
