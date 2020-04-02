@@ -1,9 +1,9 @@
 footer {
   min-height: 10vh;
-  align-items: center;
-  margin-top: 5rem;
+  width: 100%;
   display: flex;
-  float: right;
+  align-items: center;
+  justify-content: flex-end;
 
   a {
     margin: 0 2rem;
