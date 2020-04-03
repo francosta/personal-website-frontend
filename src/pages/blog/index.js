@@ -2,20 +2,41 @@ import React from "react"
 import Layout from "../../components/Layout/layout"
 import blogStyles from "./blog.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
-import avatar from "../../images/relaxed-round.png"
+import CardGrid from "../../components/CardGrid/CardGrid"
 
-const About = () => {
+const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
-      strapiAbout {
-        about_me
+      allStrapiBlogPost {
+        nodes {
+          hero {
+            image {
+              url
+            }
+            altText
+          }
+          title
+          publishedDate(formatString: "DD MMMM YYYY")
+          description
+          body
+          fields {
+            slug
+            type
+          }
+        }
       }
     }
   `)
 
-  const about_me = data.strapiAbout.about_me
+  const posts = data.allStrapiBlogPost.nodes
 
-  return <Layout></Layout>
+  return (
+    <Layout>
+      <section id="posts">
+        <CardGrid posts={posts} />
+      </section>
+    </Layout>
+  )
 }
 
-export default About
+export default Blog
