@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  max-width: 70vw;
+  flex-wrap: wrap;
+  padding-top: 20vh;
+}
+
+.profile-picture {
+  flex: 1 1 20rem;
+  padding-right: 96px;
+  text-align: right;
+  max-width: 30rem;
+}
+
+.about-text {
+  flex: 1 1 20rem;
+  border-left: 1px solid #c5c5c5;
+  padding-left: 96px;
+}
+
+@media screen and (max-width: 1020px) {
+  .container {
+    align-items: center;
+    flex-direction: column;
+    max-width: 100vw;
+  }
+
+  .about-text {
+    flex: 1 1 20rem;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .profile-picture {
+    flex: 1 1 20rem;
+    padding-right: 0;
+    text-align: center;
+    min-height: auto;
+  }
+}
