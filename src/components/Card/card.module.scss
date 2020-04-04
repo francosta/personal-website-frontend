@@ -46,10 +46,14 @@
     bottom: 0;
 
     li {
-      font-size: 1rem;
+      font-size: 1.15rem;
       font-weight: 600;
       color: #8f8f8f;
-      margin: 0 1rem 0 0;
+    }
+
+    .post-type::after {
+      margin: 0.5rem;
+      content: " \b7\a0";
     }
   }
 }
