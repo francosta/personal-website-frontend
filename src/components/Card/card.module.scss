@@ -55,6 +55,11 @@
       margin: 0.5rem;
       content: " \b7\a0";
     }
+
+    .published-date::after {
+      margin: 0.5rem;
+      content: " \b7\a0";
+    }
   }
 }
 

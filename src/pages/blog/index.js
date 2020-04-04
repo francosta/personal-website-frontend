@@ -23,6 +23,9 @@ const Blog = () => {
             slug
             type
           }
+          readingTime {
+            minutes
+          }
         }
       }
     }

@@ -51,12 +51,13 @@ module.exports.createPages = async ({ graphql, actions }) => {
             slug
             type
           }
+          readingTime {
+            minutes
+          }
         }
       }
     }
   `)
-
-  console.log(resp)
 
   //   //   // We will now create a page for each of the nodes in the response from the query.
   resp.data.allStrapiBlogPost.nodes.forEach(post => {

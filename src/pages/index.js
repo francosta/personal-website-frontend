@@ -26,6 +26,9 @@ const IndexPage = () => {
             slug
             type
           }
+          readingTime {
+            minutes
+          }
         }
       }
       strapiLandingPage {

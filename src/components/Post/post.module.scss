@@ -1,5 +1,5 @@
 .container {
-  width: 75%;
+  width: 60%;
   margin: auto;
   min-height: 80vh;
   padding-top: 5rem;
@@ -13,10 +13,10 @@
 }
 
 .description {
-  font-style: italic;
+  // font-style: italic;
   font-weight: normal;
   font-size: 2.2rem;
-  color: #616161;
+  color: #616160;
   margin: 0rem 0rem 2rem 0rem;
 }
 
@@ -24,7 +24,82 @@
   object-fit: cover;
   max-height: 20vh;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+}
+
+.details {
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: center;
+
+  .avatar {
+    height: 5rem;
+    margin-right: 0.5rem;
+  }
+
+  .detailsBox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    font-size: 1.4rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    .author {
+      color: black;
+    }
+
+    .articleDetails {
+      display: flex;
+      color: #616160;
+
+      .publishedDate::after {
+        content: " \b7\a0";
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+
+blockquote {
+  border-left: 3px solid #00cc8f;
+  color: #1a1a1a;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.8em;
+  margin: 1.1em -4em;
+  padding: 1em 2em;
+  position: relative;
+  transition: 0.2s border ease-in-out;
+  z-index: 0;
+}
+blockquote:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  height: 2em;
+  background-color: #fff;
+  width: 5px;
+  margin-top: -1em;
+}
+blockquote:after {
+  content: '"';
+  position: absolute;
+  top: 50%;
+  left: -0.5em;
+  color: #00cc8f;
+  font-family: "Ionicons";
+  font-style: normal;
+  line-height: 1em;
+  text-align: center;
+  text-indent: -2px;
+  width: 1em;
+  margin-top: -0.5em;
+  transition: 0.2s all ease-in-out, 0.4s transform ease-in-out;
 }
 
 p {
@@ -32,7 +107,6 @@ p {
   font-weight: normal;
   font-size: 2rem;
   text-align: justify;
-  margin: 1rem 0;
 }
 
 pre {
@@ -42,7 +116,7 @@ pre {
   page-break-inside: avoid;
   font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 1.6em;
+  margin: 3rem 0;
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;

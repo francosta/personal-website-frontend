@@ -23,7 +23,8 @@ const Card = ({ index, post }) => {
         <div className={cardStyles.details}>
           <ul>
             <li className={cardStyles.postType}>Blog Post</li>
-            <li>{post.publishedDate}</li>
+            <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
+            <li>{Math.round(post.readingTime.minutes)}min read</li>
           </ul>
         </div>
       </div>
@@ -48,14 +49,16 @@ const Card = ({ index, post }) => {
           <div className={cardStyles.details}>
             <ul>
               <li className={cardStyles.postType}>Blog Post</li>
-              <li>{post.publishedDate}</li>
+              <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
+              <li>{Math.round(post.readingTime.minutes)}min read</li>
             </ul>
           </div>
         ) : (
           <div className={cardStyles.details}>
             <ul>
               <li className={cardStyles.postType}>Project</li>
-              <li>{post.publishedDate}</li>
+              <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
+              <li>{Math.round(post.readingTime.minutes)}min read</li>
             </ul>
           </div>
         )}
