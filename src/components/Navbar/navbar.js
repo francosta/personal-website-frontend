@@ -11,7 +11,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`${navbarStyles.navbar}`}>
+    <nav className={`${navbarStyles.navbar} ${navbarStyles.sticky}`}>
       <div className={navbarStyles.logo}>
         <Link to="/">
           <h1 id={navbarStyles.logo}>Francisco Costa</h1>

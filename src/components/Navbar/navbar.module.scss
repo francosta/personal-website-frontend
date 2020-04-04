@@ -12,6 +12,10 @@
   flex-wrap: wrap;
   border-bottom: 2px solid #c5c5c5;
   background-color: white;
+  position: fixed;
+  width: 80vw;
+  top: 0;
+  z-index: 1;
 }
 
 .logo {
