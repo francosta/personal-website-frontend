@@ -7,4 +7,3 @@
 // You can delete this file if you're not using it
 
 // For prismjs code highlighting
-require("prismjs/themes/prism-tomorrow.css")
