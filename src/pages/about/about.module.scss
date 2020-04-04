@@ -21,15 +21,10 @@
 
 @media screen and (max-width: 1020px) {
   .container {
+    padding-top: 0;
     align-items: center;
     flex-direction: column;
     max-width: 100vw;
-  }
-
-  .about-text {
-    flex: 1 1 20rem;
-    border-left: none;
-    padding-left: 0;
   }
 
   .profile-picture {
@@ -37,5 +32,12 @@
     padding-right: 0;
     text-align: center;
     min-height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .about-text {
+    flex: 1 1 20rem;
+    border-left: none;
+    padding-left: 0;
   }
 }
