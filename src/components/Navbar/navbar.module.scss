@@ -1,8 +1,8 @@
-@mixin computer {
-  @media (min-width: 848px) {
-    @content;
-  }
-}
+// @mixin computer {
+//   @media (min-width: 848px) {
+//     @content;
+//   }
+// }
 
 .navbar {
   display: flex;
@@ -70,23 +70,6 @@
   }
 }
 
-.navbar-links.navbar-responsive {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  top: 0vh;
-  justify-content: center;
-  background-color: white;
-  transition: transform 2s ease-in;
-
-  li {
-    margin: 3rem;
-    opacity: 10;
-  }
-}
-
 // Media queries
 @media screen and (max-width: 1200px) {
   .navbar-links {
@@ -97,11 +80,30 @@
 @media screen and (max-width: 850px) {
   .burger {
     display: block;
-    z-index: 1;
+    z-index: 2;
   }
   .navbar-links {
     display: none;
     transition: transform 0.5s ease-in-out;
+  }
+}
+
+.navbar-links.navbar-responsive {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  background-color: white;
+  transition: transform 2s ease-in;
+  z-index: 1;
+
+  li {
+    margin: 3rem;
+    opacity: 10;
   }
 }
 
