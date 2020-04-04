@@ -34,6 +34,7 @@ const Card = ({ index, post }) => {
     if (post.description.length > 100) {
       descriptionExcerpt = post.description.substring(0, 97) + "..."
     }
+
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2} `}>
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
