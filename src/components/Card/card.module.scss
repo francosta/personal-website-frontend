@@ -37,16 +37,20 @@
 }
 
 .details {
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
+  padding-top: 3rem;
 
-  p {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #8f8f8f;
+  ul {
+    display: flex;
     position: absolute;
+    list-style: none;
     bottom: 0;
+
+    li {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #8f8f8f;
+      margin: 0 1rem 0 0;
+    }
   }
 }
 

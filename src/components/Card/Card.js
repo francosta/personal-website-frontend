@@ -5,6 +5,10 @@ import cardStyles from "./card.module.scss"
 
 const Card = ({ index, post }) => {
   if (index % 2 === 0 || index === 0) {
+    let descriptionExcerpt = post.description
+    if (post.description.length > 230) {
+      descriptionExcerpt = post.description.substring(0, 227) + "..."
+    }
     return (
       <div className={`${cardStyles.card} ${cardStyles.card1} `}>
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
@@ -14,15 +18,21 @@ const Card = ({ index, post }) => {
             alt={post.hero.image.altText}
           />
           <h1 className={cardStyles.postTitle}>{post.title}</h1>
-          <h6 className={cardStyles.description}>{post.description}</h6>
+          <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
         </Link>
         <div className={cardStyles.details}>
-          <p className={cardStyles.postType}>Blog Post</p> &middot;
-          <p>{post.publishedDate}</p>
+          <ul>
+            <li className={cardStyles.postType}>Blog Post</li>
+            <li>{post.publishedDate}</li>
+          </ul>
         </div>
       </div>
     )
   } else {
+    let descriptionExcerpt = post.description
+    if (post.description.length > 100) {
+      descriptionExcerpt = post.description.substring(0, 97) + "..."
+    }
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2} `}>
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
@@ -32,15 +42,21 @@ const Card = ({ index, post }) => {
             alt={post.hero.image.altText}
           />
           <h1 className={cardStyles.postTitle}>{post.title}</h1>
-          <h6 className={cardStyles.description}>{post.description}</h6>
+          <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
         </Link>
         {post.fields.type === "blog" ? (
           <div className={cardStyles.details}>
-            <p>Blog Post</p> &middot; <p>{post.publishedDate}</p>
+            <ul>
+              <li className={cardStyles.postType}>Blog Post</li>
+              <li>{post.publishedDate}</li>
+            </ul>
           </div>
         ) : (
           <div className={cardStyles.details}>
-            <p>Project</p> &middot; <p>{post.publishedDate}</p>
+            <ul>
+              <li className={cardStyles.postType}>Project</li>
+              <li>{post.publishedDate}</li>
+            </ul>
           </div>
         )}
       </div>
