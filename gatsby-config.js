@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Dev Fran`,
     description: `Dev Fran - This is my personal website.`,
-    author: `Francsico Costa`,
+    author: `Francisco Costa`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,6 +36,22 @@ module.exports = {
       options: {
         google: {
           families: ["Poppins", "sans serif"],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-readingtime`,
+      options: {
+        config: {
+          // configuration for reading-time package https://github.com/ngryman/reading-time
+        },
+        types: {
+          // Key: GraphQL Type to add reading times to, Value: Resolver function takes source node of Defined GraphQL type and returns content to be processed.
+          StrapiBlogPost: source => {
+            console.log(source)
+            const { body } = source
+            return body
+          },
         },
       },
     },

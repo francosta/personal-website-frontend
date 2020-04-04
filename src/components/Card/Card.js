@@ -23,7 +23,8 @@ const Card = ({ index, post }) => {
         <div className={cardStyles.details}>
           <ul>
             <li className={cardStyles.postType}>Blog Post</li>
-            <li>{post.publishedDate}</li>
+            <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
+            <li>{Math.round(post.readingTime.minutes)}min read</li>
           </ul>
         </div>
       </div>
@@ -33,6 +34,7 @@ const Card = ({ index, post }) => {
     if (post.description.length > 100) {
       descriptionExcerpt = post.description.substring(0, 97) + "..."
     }
+
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2} `}>
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
@@ -48,14 +50,16 @@ const Card = ({ index, post }) => {
           <div className={cardStyles.details}>
             <ul>
               <li className={cardStyles.postType}>Blog Post</li>
-              <li>{post.publishedDate}</li>
+              <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
+              <li>{Math.round(post.readingTime.minutes)}min read</li>
             </ul>
           </div>
         ) : (
           <div className={cardStyles.details}>
             <ul>
               <li className={cardStyles.postType}>Project</li>
-              <li>{post.publishedDate}</li>
+              <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
+              <li>{Math.round(post.readingTime.minutes)}min read</li>
             </ul>
           </div>
         )}
