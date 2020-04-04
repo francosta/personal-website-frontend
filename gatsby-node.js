@@ -9,9 +9,10 @@ module.exports.onCreateNode = ({ node, actions }) => {
   //   // If we're looking at the nodes within MarkdownRemark (the blog posts),
   //   // we are creating a new field in each of the nodes for the slug, which will take the name of the file.
 
-  if (node.internal.type === "StrapiBlogPost") {
+  if (node.internal.type === "DatoCmsBlogPost") {
     const sluggedTitle = node.title.replace(/\s+/g, "-").toLowerCase()
     const slug = sluggedTitle
+
     createNodeField({
       node,
       name: "slug",
@@ -35,17 +36,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //   //   // This will get a slug for each of the existing nodes.
   const resp = await graphql(`
     query {
-      allStrapiBlogPost {
+      allDatoCmsBlogPost {
         nodes {
-          hero {
-            image {
-              url
-            }
-            altText
+          heroImage {
+            url
+            alt
           }
           title
           publishedDate(formatString: "DD MMMM YYYY")
-          description
+          lead
           body
           fields {
             slug
@@ -59,7 +58,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   console.log(resp)
 
   //   //   // We will now create a page for each of the nodes in the response from the query.
-  resp.data.allStrapiBlogPost.nodes.forEach(post => {
+  resp.data.allDatoCmsBlogPost.nodes.forEach(post => {
     createPage({
       component: blogTemplate,
       path: `/blog/${post.fields.slug}`,

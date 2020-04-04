@@ -10,17 +10,15 @@ import CardGrid from "../components/CardGrid/CardGrid"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allStrapiBlogPost {
+      allDatoCmsBlogPost {
         nodes {
-          hero {
-            image {
-              url
-            }
-            altText
+          heroImage {
+            url
+            alt
           }
           title
           publishedDate(formatString: "DD MMMM YYYY")
-          description
+          lead
           body
           fields {
             slug
@@ -28,14 +26,14 @@ const IndexPage = () => {
           }
         }
       }
-      strapiLandingPage {
+      datoCmsLanding {
         landingText
       }
     }
   `)
 
-  const posts = data.allStrapiBlogPost.nodes
-  const landingText = data.strapiLandingPage.landingText
+  const posts = data.allDatoBlogPost.nodes
+  const landingText = data.datoCmsLanding.landingText
 
   return (
     <Layout>

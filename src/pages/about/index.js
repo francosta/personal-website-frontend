@@ -7,13 +7,13 @@ import avatar from "../../images/relaxed-round.png"
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      strapiAbout {
-        about_me
+      datoCmsAbout {
+        about
       }
     }
   `)
 
-  const about_me = data.strapiAbout.about_me
+  const about_me = data.datoCmsAbout.about
 
   return (
     <Layout>

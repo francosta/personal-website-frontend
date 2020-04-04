@@ -7,17 +7,15 @@ import CardGrid from "../../components/CardGrid/CardGrid"
 const Blog = () => {
   const data = useStaticQuery(graphql`
     query {
-      allStrapiBlogPost {
+      allDatoCmsBlogPost {
         nodes {
-          hero {
-            image {
-              url
-            }
-            altText
+          heroImage {
+            url
+            alt
           }
           title
           publishedDate(formatString: "DD MMMM YYYY")
-          description
+          lead
           body
           fields {
             slug
