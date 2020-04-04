@@ -32,7 +32,7 @@ const Blog = () => {
 
   return (
     <Layout>
-      <section id="posts">
+      <section className={blogStyles.container}>
         <CardGrid posts={posts} />
       </section>
     </Layout>
