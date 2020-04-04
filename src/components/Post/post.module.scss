@@ -33,3 +33,9 @@ p {
   text-align: justify;
   margin: 1rem 0;
 }
+
+@media screen and (max-width: 850px) {
+  .container {
+    width: 100%;
+  }
+}
