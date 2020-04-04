@@ -63,7 +63,7 @@
   }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 1100px) {
   .card1 {
     grid-column: auto;
   }
@@ -71,7 +71,9 @@
   .card2 {
     grid-column: auto;
   }
+}
 
+@media screen and (max-width: 750px) {
   .details {
     display: none;
   }
