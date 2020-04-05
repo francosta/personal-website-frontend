@@ -21,7 +21,7 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`Blog-Post`],
+        contentTypes: [`Blog-Post`, `Project`],
         singleTypes: [`About`, `Landing-Page`],
       },
     },
@@ -48,7 +48,6 @@ module.exports = {
         types: {
           // Key: GraphQL Type to add reading times to, Value: Resolver function takes source node of Defined GraphQL type and returns content to be processed.
           StrapiBlogPost: source => {
-            console.log(source)
             const { body } = source
             return body
           },
