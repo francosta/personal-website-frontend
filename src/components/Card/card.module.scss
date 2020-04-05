@@ -9,12 +9,20 @@
   }
 }
 
-.card1 {
+.card1-left {
   grid-column: 1/3;
 }
 
-.card2 {
+.card2-right {
   grid-column: 3/4;
+}
+
+.card1-right {
+  grid-column: 2/4;
+}
+
+.card2-left {
+  grid-column: 1/2;
 }
 
 .image {
