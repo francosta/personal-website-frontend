@@ -23,7 +23,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
       value: "blog",
     })
   } else if (node.internal.type === "StrapiProject") {
-    const sluggedName = node.name.replace(/\s+/g, "-").toLowerCase()
+    const sluggedName = node.title.replace(/\s+/g, "-").toLowerCase()
     const slug = sluggedName
     createNodeField({
       node,
@@ -78,7 +78,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
             }
             altText
           }
-          name
+          title
           publishedDate(formatString: "DD MMMM YYYY")
           description
           body

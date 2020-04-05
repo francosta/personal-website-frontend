@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout/layout"
-import Post from "../components/BlogPost/BlogPost"
+import Post from "../components/ProjectPost/ProjectPost"
 
 const ProjectPost = ({ pageContext }) => {
   return (

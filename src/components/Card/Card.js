@@ -18,7 +18,6 @@ const Card = ({ index, post }) => {
 
     return (
       <div className={`${cardStyles.card} ${cardStyles.card1Left}`}>
-        {console.log(selector)}
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
@@ -48,7 +47,6 @@ const Card = ({ index, post }) => {
 
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2Right}`}>
-        {console.log(selector)}
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
@@ -78,7 +76,6 @@ const Card = ({ index, post }) => {
 
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2Left}`}>
-        {console.log(selector)}
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
@@ -108,7 +105,6 @@ const Card = ({ index, post }) => {
 
     return (
       <div className={`${cardStyles.card} ${cardStyles.card1Right}`}>
-        {console.log(selector)}
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
