@@ -78,7 +78,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
             }
             altText
           }
-          name
+          title
           publishedDate(formatString: "DD MMMM YYYY")
           description
           body
