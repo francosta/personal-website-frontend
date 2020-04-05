@@ -1,10 +1,11 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
-import postStyles from "./post.module.scss"
+import postStyles from "./projectPost.module.scss"
 import avatar from "../../images/relaxed-round.png"
 import { Link } from "gatsby"
 
 const Post = ({ post }) => {
+  console.log(post)
   return (
     <div className={postStyles.container}>
       <img
@@ -13,6 +14,9 @@ const Post = ({ post }) => {
         alt={post.hero.image.altText}
       />
       <h1 className={postStyles.title}>{post.title}</h1>
+      <section clasName={postStyles.summaryBox}>
+        <div className={postStyles.details}></div>
+      </section>
       <h2 className={postStyles.description}>{post.description}</h2>
       <div className={postStyles.details}>
         <Link to="/about">

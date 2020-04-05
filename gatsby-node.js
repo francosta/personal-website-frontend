@@ -89,6 +89,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
             slug
             type
           }
+          stack {
+            technology {
+              name
+            }
+          }
+          networks {
+            network
+            link
+          }
         }
       }
     }
