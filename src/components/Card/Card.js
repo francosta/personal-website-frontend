@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import cardStyles from "./card.module.scss"
 
 const Card = ({ index, post }) => {
+  console.log(post)
   const structure = [1, 2, 3, 4] //should be an enum?
   const ind = index % structure.length
   const selector = structure[ind]
@@ -29,7 +30,10 @@ const Card = ({ index, post }) => {
         </Link>
         <div className={cardStyles.details}>
           <ul>
-            <li className={cardStyles.postType}>Blog Post</li>
+            <li className={cardStyles.postType}>
+              {post.fields.type.charAt(0).toUpperCase() +
+                post.fields.type.slice(1)}
+            </li>
             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
             <li>{Math.round(post.readingTime.minutes)}min read</li>
           </ul>
@@ -56,7 +60,10 @@ const Card = ({ index, post }) => {
         </Link>
         <div className={cardStyles.details}>
           <ul>
-            <li className={cardStyles.postType}>Blog Post</li>
+            <li className={cardStyles.postType}>
+              {post.fields.type.charAt(0).toUpperCase() +
+                post.fields.type.slice(1)}
+            </li>
             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
             <li>{Math.round(post.readingTime.minutes)}min read</li>
           </ul>
@@ -83,7 +90,10 @@ const Card = ({ index, post }) => {
         </Link>
         <div className={cardStyles.details}>
           <ul>
-            <li className={cardStyles.postType}>Blog Post</li>
+            <li className={cardStyles.postType}>
+              {post.fields.type.charAt(0).toUpperCase() +
+                post.fields.type.slice(1)}
+            </li>
             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
             <li>{Math.round(post.readingTime.minutes)}min read</li>
           </ul>
@@ -110,7 +120,10 @@ const Card = ({ index, post }) => {
         </Link>
         <div className={cardStyles.details}>
           <ul>
-            <li className={cardStyles.postType}>Blog Post</li>
+            <li className={cardStyles.postType}>
+              {post.fields.type.charAt(0).toUpperCase() +
+                post.fields.type.slice(1)}
+            </li>
             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
             <li>{Math.round(post.readingTime.minutes)}min read</li>
           </ul>
@@ -139,7 +152,7 @@ const Card = ({ index, post }) => {
   //       {post.fields.type === "blog" ? (
   //         <div className={cardStyles.details}>
   //           <ul>
-  //             <li className={cardStyles.postType}>Blog Post</li>
+  //             <li className={cardStyles.postType}>{post.fields.type.charAt(0).toUpperCase() + post.fields.type.slice(1)}</li>
   //             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
   //             <li>{Math.round(post.readingTime.minutes)}min read</li>
   //           </ul>
