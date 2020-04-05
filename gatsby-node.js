@@ -79,8 +79,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
             altText
           }
           name
-          date(formatString: "DD MMMM YYYY")
-          summary
+          publishedDate(formatString: "DD MMMM YYYY")
+          description
           body
           readingTime {
             minutes
@@ -94,7 +94,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  // We will now create a page for each of the nodes in the response from the query.
+  // Create pages for blog posts, from blog post template.
   resp.data.allStrapiBlogPost.nodes.forEach(post => {
     createPage({
       component: blogTemplate,
@@ -106,6 +106,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  // Create pages for project posts, from project post template.
   resp.data.allStrapiProject.nodes.forEach(post => {
     createPage({
       component: projectTemplate,
