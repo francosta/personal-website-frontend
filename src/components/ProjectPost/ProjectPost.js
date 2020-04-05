@@ -10,21 +10,24 @@ import stackIcon from "../../images/code-icon.svg"
 import summaryIcon from "../../images/summary.svg"
 
 const Post = ({ post }) => {
-  console.log(post)
   return (
     <div className={postStyles.container}>
-      <img
-        className={postStyles.hero}
-        src={`${process.env.API_URL}${post.hero.image.url}`}
-        alt={post.hero.image.altText}
-      />
-      <h1 className={postStyles.title}>{post.title}</h1>
-      <section clasName={postStyles.summaryBox}>
+      <section>
+        <img
+          className={postStyles.hero}
+          src={`${process.env.API_URL}${post.hero.image.url}`}
+          alt={post.hero.image.altText}
+        />
+        <h1 className={postStyles.title}>{post.title}</h1>
+      </section>
+      <section className={postStyles.summaryBox}>
         <div className={postStyles.specs}>
           <div className={postStyles.date}>
-            <h2>Date of Project</h2>
+            <div>
+              <h2>Date of Project</h2>
+              <span>{post.publishedDate}</span>
+            </div>
             <img src={dateIcon}></img>
-            <span>{post.publishedDate}</span>
           </div>
           <div className={postStyles.stack}>
             <h2>Stack</h2>
@@ -39,11 +42,10 @@ const Post = ({ post }) => {
         <div className={postStyles.details}>
           <img src={summaryIcon}></img>
           <h2>Summary</h2>
-          <p>{post.description}</p>
+          <h2 className={postStyles.description}>{post.description}</h2>
         </div>
       </section>
-      <h2 className={postStyles.description}>{post.description}</h2>
-      <div className={postStyles.details}>
+      <section className={postStyles.details}>
         <Link to="/about">
           <img className={postStyles.avatar} src={avatar}></img>
         </Link>
@@ -58,8 +60,10 @@ const Post = ({ post }) => {
             <span>{Math.round(post.readingTime.minutes)}min read</span>
           </div>
         </div>
-      </div>
-      <ReactMarkdown source={post.body} />
+      </section>
+      <section>
+        <ReactMarkdown source={post.body} />
+      </section>
     </div>
   )
 }
