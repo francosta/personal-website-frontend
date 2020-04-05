@@ -1,8 +1,13 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
-import postStyles from "./projectPost.module.scss"
-import avatar from "../../images/relaxed-round.png"
 import { Link } from "gatsby"
+import postStyles from "./projectPost.module.scss"
+
+// Images import
+import avatar from "../../images/relaxed-round.png"
+import dateIcon from "../../images/date.svg"
+import stackIcon from "../../images/code-icon.svg"
+import summaryIcon from "../../images/summary.svg"
 
 const Post = ({ post }) => {
   console.log(post)
@@ -15,7 +20,27 @@ const Post = ({ post }) => {
       />
       <h1 className={postStyles.title}>{post.title}</h1>
       <section clasName={postStyles.summaryBox}>
-        <div className={postStyles.details}></div>
+        <div className={postStyles.specs}>
+          <div className={postStyles.date}>
+            <h2>Date of Project</h2>
+            <img src={dateIcon}></img>
+            <span>{post.publishedDate}</span>
+          </div>
+          <div className={postStyles.stack}>
+            <h2>Stack</h2>
+            <img src={stackIcon}></img>
+            <ul>
+              {post.stack.technology.map(technology => (
+                <li>{technology.name}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className={postStyles.details}>
+          <img src={summaryIcon}></img>
+          <h2>Summary</h2>
+          <p>{post.description}</p>
+        </div>
       </section>
       <h2 className={postStyles.description}>{post.description}</h2>
       <div className={postStyles.details}>

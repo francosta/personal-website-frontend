@@ -39,7 +39,6 @@
 
   .detailsBox {
     display: flex;
-    flex-direction: column;
     margin-left: 0.5rem;
     font-size: 1.4rem;
 
@@ -61,6 +60,13 @@
       }
     }
   }
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+
+  
 }
 
 blockquote {
