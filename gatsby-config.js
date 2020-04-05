@@ -51,6 +51,10 @@ module.exports = {
             const { body } = source
             return body
           },
+          StrapiProject: source => {
+            const { body } = source
+            return body
+          },
         },
       },
     },
