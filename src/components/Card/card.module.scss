@@ -72,11 +72,19 @@
 }
 
 @media screen and (max-width: 1100px) {
-  .card1 {
+  .card1-left {
     grid-column: auto;
   }
 
-  .card2 {
+  .card2-right {
+    grid-column: auto;
+  }
+
+  .card1-right {
+    grid-column: auto;
+  }
+
+  .card2-left {
     grid-column: auto;
   }
 }
