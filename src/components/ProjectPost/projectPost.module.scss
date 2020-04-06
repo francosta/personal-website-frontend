@@ -24,11 +24,12 @@
   object-fit: cover;
   max-height: 35vh;
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .summary-box {
   display: flex;
+  margin-top: 5rem;
   margin-bottom: 9rem;
 
   .specs {
@@ -86,6 +87,7 @@
       font-size: 1.2rem;
 
       p {
+        padding-top: 1rem;
         font-size: 1.2rem;
         color: #525252;
       }
