@@ -34,21 +34,39 @@
     padding-right: 2.8rem;
     padding-left: 8.7rem;
     border-right: 1px solid #000000;
-  }
 
-  .date {
-    display: flex;
+    .date-box {
+      display: flex;
+      align-items: flex-start;
+      align-self: flex-end;
 
-    div {
-      text-align: right;
-      white-space: nowrap;
-      margin-right: 1.4rem;
-      margin-bottom: 1.2rem;
+      .date {
+        text-align: right;
+        white-space: nowrap;
+        margin-right: 1.4rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.2rem;
+      }
     }
-  }
-  .stack {
-    display: flex;
-    margin-top: 1.2rem;
+
+    .stack-box {
+      display: flex;
+      margin-top: 1.2rem;
+      align-items: flex-start;
+      align-self: flex-end;
+
+      .stack {
+        text-align: right;
+        margin-right: 1.4rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.2rem;
+
+        ul {
+          list-style: none;
+          white-space: nowrap;
+        }
+      }
+    }
   }
 
   .details {
