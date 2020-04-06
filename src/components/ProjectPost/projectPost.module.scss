@@ -29,11 +29,13 @@
 
 .summary-box {
   display: flex;
+  margin-bottom: 9rem;
 
   .specs {
     padding-right: 2.8rem;
-    padding-left: 8.7rem;
+    padding-left: 5rem;
     border-right: 1px solid #000000;
+    justify-content: space-around;
 
     .date-box {
       display: flex;
@@ -51,14 +53,12 @@
 
     .stack-box {
       display: flex;
-      margin-top: 1.2rem;
       align-items: flex-start;
       align-self: flex-end;
 
       .stack {
         text-align: right;
         margin-right: 1.4rem;
-        margin-bottom: 1.2rem;
         font-size: 1.2rem;
 
         ul {
@@ -69,19 +69,26 @@
     }
   }
 
-  .details {
+  .summary-container {
     display: flex;
-    flex-direction: column;
-    margin-left: 2.8rem;
+    align-self: flex-start;
+    padding-left: 2.8rem;
+    padding-right: 5rem;
+    justify-content: space-around;
 
-    .details-header {
-      display: flex;
-      align-self: flex-start;
+    img {
+      height: 2.4rem;
     }
 
-    .description {
-      padding-left: 1.4rem;
-      font-size: 1.8rem;
+    .summary {
+      text-align: left;
+      margin-left: 1.4rem;
+      font-size: 1.2rem;
+
+      p {
+        font-size: 1.2rem;
+        color: #525252;
+      }
     }
   }
 }

@@ -41,10 +41,12 @@ const Post = ({ post }) => {
             <img src={stackIcon}></img>
           </div>
         </div>
-        <div className={postStyles.details}>
+        <div className={postStyles.summaryContainer}>
           <img src={summaryIcon}></img>
-          <h2>Summary</h2>
-          <h2 className={postStyles.description}>{post.description}</h2>
+          <div className={postStyles.summary}>
+            <h2>Summary</h2>
+            <p>{post.description}</p>
+          </div>
         </div>
       </section>
       <section className={postStyles.details}>
