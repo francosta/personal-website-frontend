@@ -1,19 +1,17 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import cardStyles from "./card.module.scss"
+import cardStyles from './card.module.scss';
 
 const Card = ({ index, post }) => {
-  console.log(post)
-  const structure = [1, 2, 3, 4] //should be an enum?
-  const ind = index % structure.length
-  const selector = structure[ind]
-  console.log(selector)
+  const structure = [1, 2, 3, 4]; // should be an enum?
+  const ind = index % structure.length;
+  const selector = structure[ind];
 
   if (selector === 1) {
-    let descriptionExcerpt = post.description
+    let descriptionExcerpt = post.description;
     if (post.description.length > 230) {
-      descriptionExcerpt = post.description.substring(0, 227) + "..."
+      descriptionExcerpt = post.description.substring(0, 227) + '...';
     }
 
     return (
@@ -38,11 +36,11 @@ const Card = ({ index, post }) => {
           </ul>
         </div>
       </div>
-    )
+    );
   } else if (selector === 2) {
-    let descriptionExcerpt = post.description
+    let descriptionExcerpt = post.description;
     if (post.description.length > 100) {
-      descriptionExcerpt = post.description.substring(0, 97) + "..."
+      descriptionExcerpt = post.description.substring(0, 97) + '...';
     }
 
     return (
@@ -67,11 +65,11 @@ const Card = ({ index, post }) => {
           </ul>
         </div>
       </div>
-    )
+    );
   } else if (selector === 3) {
-    let descriptionExcerpt = post.description
+    let descriptionExcerpt = post.description;
     if (post.description.length > 100) {
-      descriptionExcerpt = post.description.substring(0, 97) + "..."
+      descriptionExcerpt = post.description.substring(0, 97) + '...';
     }
 
     return (
@@ -96,11 +94,11 @@ const Card = ({ index, post }) => {
           </ul>
         </div>
       </div>
-    )
+    );
   } else {
-    let descriptionExcerpt = post.description
+    let descriptionExcerpt = post.description;
     if (post.description.length > 230) {
-      descriptionExcerpt = post.description.substring(0, 227) + "..."
+      descriptionExcerpt = post.description.substring(0, 227) + '...';
     }
 
     return (
@@ -125,7 +123,7 @@ const Card = ({ index, post }) => {
           </ul>
         </div>
       </div>
-    )
+    );
   }
 
   // } else {
@@ -165,6 +163,6 @@ const Card = ({ index, post }) => {
   //     </div>
   //   )
   // }
-}
+};
 
-export default Card
+export default Card;
