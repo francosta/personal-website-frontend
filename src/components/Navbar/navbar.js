@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
-import navbarStyles from "./navbar.module.scss"
+import React from 'react';
+import { Link } from 'gatsby';
+import navbarStyles from './navbar.module.scss';
 
 const Navbar = () => {
   const activateResponsiveMenu = () => {
-    const navbarLinks = document.querySelector("#navbarLinks")
-    navbarLinks.classList.toggle(navbarStyles.navbarResponsive)
-    const burger = document.querySelector("#burger")
-    burger.classList.toggle(navbarStyles.clicked)
-  }
+    const navbarLinks = document.querySelector('#navbarLinks');
+    navbarLinks.classList.toggle(navbarStyles.navbarResponsive);
+    const burger = document.querySelector('#burger');
+    burger.classList.toggle(navbarStyles.clicked);
+  };
 
   return (
     <nav className={`${navbarStyles.navbar} ${navbarStyles.sticky}`}>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <Link to="/">Projects</Link>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
           <Link to="/">Contact</Link>
@@ -36,12 +36,12 @@ const Navbar = () => {
         onClick={activateResponsiveMenu}
         className={navbarStyles.burger}
       >
-        <div className={navbarStyles.line1}></div>
-        <div className={navbarStyles.line2}></div>
-        <div className={navbarStyles.line3}></div>
+        <div className={navbarStyles.line1} />
+        <div className={navbarStyles.line2} />
+        <div className={navbarStyles.line3} />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
