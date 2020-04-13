@@ -1,13 +1,14 @@
-import React from "react"
-import ReactMarkdown from "react-markdown"
-import { Link } from "gatsby"
-import postStyles from "./projectPost.module.scss"
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import postStyles from './projectPost.module.scss';
 
 // Images import
-import avatar from "../../images/relaxed-round.png"
-import dateIcon from "../../images/date.svg"
-import stackIcon from "../../images/code-icon.svg"
-import summaryIcon from "../../images/summary.svg"
+import avatar from '../../images/relaxed-round.png';
+import dateIcon from '../../images/date.svg';
+import stackIcon from '../../images/code-icon.svg';
+import summaryIcon from '../../images/summary.svg';
 
 const Post = ({ post }) => {
   return (
@@ -49,27 +50,15 @@ const Post = ({ post }) => {
           </div>
         </div>
       </section>
-      <section className={postStyles.details}>
-        <Link to="/about">
-          <img className={postStyles.avatar} src={avatar}></img>
-        </Link>
-        <div className={postStyles.detailsBox}>
-          <Link to="/about">
-            <span className={postStyles.author}>Francisco Costa</span>
-          </Link>
-          <div className={postStyles.articleDetails}>
-            <span className={postStyles.publishedDate}>
-              {post.publishedDate}
-            </span>
-            <span>{Math.round(post.readingTime.minutes)}min read</span>
-          </div>
-        </div>
-      </section>
       <section>
         <ReactMarkdown source={post.body} />
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Post
+Post.propTypes = {
+  post: PropTypes.element.isRequired,
+};
+
+export default Post;
