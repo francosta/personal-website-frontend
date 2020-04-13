@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import postStyles from './projectPost.module.scss';
 
 // Images import
-import avatar from '../../images/relaxed-round.png';
 import dateIcon from '../../images/date.svg';
 import stackIcon from '../../images/code-icon.svg';
 import summaryIcon from '../../images/summary.svg';
@@ -28,7 +26,7 @@ const Post = ({ post }) => {
               <h2>Date of Project</h2>
               <span>{post.publishedDate}</span>
             </div>
-            <img src={dateIcon}></img>
+            <img src={dateIcon} alt="Calendar icon in black and white" />
           </div>
           <div className={postStyles.stackBox}>
             <div className={postStyles.stack}>
@@ -39,11 +37,11 @@ const Post = ({ post }) => {
                 ))}
               </ul>
             </div>
-            <img src={stackIcon}></img>
+            <img src={stackIcon} alt="Programming icon in black and white" />
           </div>
         </div>
         <div className={postStyles.summaryContainer}>
-          <img src={summaryIcon}></img>
+          <img src={summaryIcon} alt="Text icon in black and white" />
           <div className={postStyles.summary}>
             <h2>Summary</h2>
             <p>{post.description}</p>
