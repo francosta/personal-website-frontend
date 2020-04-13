@@ -1,8 +1,9 @@
-import React from "react"
-import ReactMarkdown from "react-markdown"
-import postStyles from "./blogPost.module.scss"
-import avatar from "../../images/relaxed-round.png"
-import { Link } from "gatsby"
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import postStyles from './blogPost.module.scss';
+import avatar from '../../images/relaxed-round.png';
 
 const Post = ({ post }) => {
   return (
@@ -16,7 +17,7 @@ const Post = ({ post }) => {
       <h2 className={postStyles.description}>{post.description}</h2>
       <div className={postStyles.details}>
         <Link to="/about">
-          <img className={postStyles.avatar} src={avatar}></img>
+          <img className={postStyles.avatar} src={avatar} />
         </Link>
         <div className={postStyles.detailsBox}>
           <Link to="/about">
@@ -32,7 +33,11 @@ const Post = ({ post }) => {
       </div>
       <ReactMarkdown source={post.body} />
     </div>
-  )
-}
+  );
+};
 
-export default Post
+Post.propTypes = {
+  post: PropTypes.element.isRequired,
+};
+
+export default Post;
