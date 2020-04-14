@@ -1,12 +1,19 @@
 import React from "react"
 import footerStyles from "./footer.module.scss"
+import linkedinLogo from "../../images/linkedin.png"
+import githubLogo from "../../images/github.png"
 
 const Footer = () => {
   return (
     <footer>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <a href="https://github.com/francosta/" target="blank">
+        <img src={githubLogo}></img>
+        <h1>Github</h1>
+      </a>
+      <a href="https://www.linkedin.com/in/francosta/" target="blank">
+        <img src={linkedinLogo}></img>
+        <h1>Linkedin</h1>
+      </a>
     </footer>
   )
 }

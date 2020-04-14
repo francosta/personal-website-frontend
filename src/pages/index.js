@@ -26,6 +26,30 @@ const IndexPage = () => {
             slug
             type
           }
+          readingTime {
+            minutes
+          }
+        }
+      }
+      allStrapiProject {
+        nodes {
+          hero {
+            image {
+              url
+            }
+            altText
+          }
+          title
+          publishedDate(formatString: "DD MMMM YYYY")
+          description
+          body
+          readingTime {
+            minutes
+          }
+          fields {
+            slug
+            type
+          }
         }
       }
       strapiLandingPage {
@@ -34,7 +58,10 @@ const IndexPage = () => {
     }
   `)
 
-  const posts = data.allStrapiBlogPost.nodes
+  const posts = data.allStrapiBlogPost.nodes.concat(data.allStrapiProject.nodes)
+
+  console.log(posts)
+
   const landingText = data.strapiLandingPage.landingText
 
   return (

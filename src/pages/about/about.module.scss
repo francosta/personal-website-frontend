@@ -1,6 +1,7 @@
 .container {
   display: flex;
   max-width: 70vw;
+  margin: auto;
   flex-wrap: wrap;
   padding-top: 20vh;
 }
@@ -9,7 +10,7 @@
   flex: 1 1 20rem;
   padding-right: 96px;
   text-align: right;
-  min-height: 50vh;
+  max-width: 35rem;
 }
 
 .about-text {
@@ -20,15 +21,10 @@
 
 @media screen and (max-width: 1020px) {
   .container {
+    padding-top: 5rem;
     align-items: center;
     flex-direction: column;
     max-width: 100vw;
-  }
-
-  .about-text {
-    flex: 1 1 20rem;
-    border-left: none;
-    padding-left: 0;
   }
 
   .profile-picture {
@@ -36,5 +32,12 @@
     padding-right: 0;
     text-align: center;
     min-height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .about-text {
+    flex: 1 1 20rem;
+    border-left: none;
+    padding-left: 0;
   }
 }

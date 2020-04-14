@@ -1,7 +1,20 @@
-@mixin computer {
-  @media (min-width: 848px) {
-    @content;
-  }
+// @mixin computer {
+//   @media (min-width: 848px) {
+//     @content;
+//   }
+// }
+
+nav {
+  // margin-left: -10vw;
+  width: 100vw;
+  background-color: white;
+  z-index: 1;
+  min-height: 10vh;
+  position: fixed;
+  display: flex;
+  top: 0;
+  margin-left: -10vw;
+  padding-left: 10vw;
 }
 
 .navbar {
@@ -9,17 +22,17 @@
   justify-content: space-between;
   align-items: center;
   min-height: 10vh;
-  margin: 0 0 5rem 0;
   flex-wrap: wrap;
   border-bottom: 2px solid #c5c5c5;
-  position: fixed;
-  z-index: 1;
-  width: 80%;
   background-color: white;
+  position: fixed;
+  width: 80%;
+  top: 0;
+  z-index: 2;
 }
 
 .logo {
-  flex: 1 1 20rem;
+  flex: 1 1 10rem;
 
   h1 {
     font-size: 24px;
@@ -32,7 +45,7 @@
 }
 
 .navbar-links {
-  flex: 1 1 20rem;
+  flex: 1 1 10rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -50,47 +63,75 @@
   }
 }
 
-#hamburger {
-  margin: 1rem;
-  justify-self: end; //We want the hamburger to appear on the right end, where users will be expecting it.
-  display: block;
-  background: white;
-  border: none;
-  font-size: 1, 2rem;
-  line-height: 1;
-  #expanded {
-    display: none;
-  }
-  svg {
-    width: 40px;
-    height: 40px;
-  }
+.burger {
+  display: none;
+  cursor: pointer;
+}
 
-  span {
-    font-variant: small-caps;
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+// Active responsive menu
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Media queries
+@media screen and (max-width: 1200px) {
+  .navbar-links {
+    flex: 1 1 30rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .burger {
     display: block;
-    // position: relative;
-    top: 15px;
+    z-index: 2;
   }
-
-  @include computer {
+  .navbar-links {
     display: none;
+    transition: transform 0.5s ease-in-out;
   }
+}
 
-  &[aria-expanded="true"] {
-    color: black;
+.navbar-links.navbar-responsive {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  right: -10vw;
+  justify-content: center;
+  background-color: white;
+  transition: transform 2s ease-in;
+  z-index: 1;
 
-    svg {
-      background-color: red;
-      fill: black;
-    }
-
-    span {
-      position: static;
-    }
-
-    #expanded {
-      display: block;
-    }
+  li {
+    margin: 3rem;
+    opacity: 10;
   }
+}
+
+.clicked .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.clicked .line2 {
+  opacity: 0;
+}
+
+.clicked .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }

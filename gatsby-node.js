@@ -22,6 +22,19 @@ module.exports.onCreateNode = ({ node, actions }) => {
       name: "type",
       value: "blog",
     })
+  } else if (node.internal.type === "StrapiProject") {
+    const sluggedName = node.title.replace(/\s+/g, "-").toLowerCase()
+    const slug = sluggedName
+    createNodeField({
+      node,
+      name: "slug",
+      value: slug,
+    })
+    createNodeField({
+      node,
+      name: "type",
+      value: "project",
+    })
   }
 }
 
@@ -31,6 +44,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogTemplate = path.resolve("./src/templates/blogPost.js")
+  const projectTemplate = path.resolve("./src/templates/projectPost.js")
 
   //   //   // This will get a slug for each of the existing nodes.
   const resp = await graphql(`
@@ -51,18 +65,61 @@ module.exports.createPages = async ({ graphql, actions }) => {
             slug
             type
           }
+          readingTime {
+            minutes
+          }
+        }
+      }
+      allStrapiProject {
+        nodes {
+          hero {
+            image {
+              url
+            }
+            altText
+          }
+          title
+          publishedDate(formatString: "DD MMMM YYYY")
+          description
+          body
+          readingTime {
+            minutes
+          }
+          fields {
+            slug
+            type
+          }
+          stack {
+            technology {
+              name
+            }
+          }
+          networks {
+            network
+            link
+          }
         }
       }
     }
   `)
 
-  console.log(resp)
-
-  //   //   // We will now create a page for each of the nodes in the response from the query.
+  // Create pages for blog posts, from blog post template.
   resp.data.allStrapiBlogPost.nodes.forEach(post => {
     createPage({
       component: blogTemplate,
       path: `/blog/${post.fields.slug}`,
+      context: {
+        post: post,
+        slug: post.slug, //We are injecting the slug of the post in the context of the page.
+      },
+    })
+  })
+
+  // Create pages for project posts, from project post template.
+  resp.data.allStrapiProject.nodes.forEach(post => {
+    createPage({
+      component: projectTemplate,
+      path: `/project/${post.fields.slug}`,
       context: {
         post: post,
         slug: post.slug, //We are injecting the slug of the post in the context of the page.

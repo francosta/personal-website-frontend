@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../components/Layout/layout"
 import aboutStyles from "./about.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
+import avatar from "../../images/relaxed-round.png"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -18,7 +19,7 @@ const About = () => {
     <Layout>
       <div className={aboutStyles.container}>
         <div className={aboutStyles.profilePicture}>
-          <img src="../../../images/relaxed-round.png"></img>
+          <img className={aboutStyles.profilePicture} src={avatar}></img>
         </div>
         <div className={aboutStyles.aboutText}>
           <p>{about_me}</p>

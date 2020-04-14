@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  padding-top: 10vh;
 }
 
 h6 {
@@ -22,7 +23,7 @@ h6 {
 }
 
 .landing {
-  min-height: 90vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -32,14 +33,14 @@ h6 {
 .introduction {
   min-height: 75vh;
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 0%;
   transform: translate(-50%, 0%, -50%, 0);
 }
 
 .goToPosts {
   position: absolute;
-  top: 90%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
