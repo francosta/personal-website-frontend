@@ -14,7 +14,7 @@ const Post = ({ post }) => {
       <section>
         <img
           className={postStyles.hero}
-          src={`${process.env.API_URL}${post.hero.image.url}`}
+          src={`${post.hero.image.url}`}
           alt={post.hero.image.altText}
         />
         <h1 className={postStyles.title}>{post.title}</h1>
@@ -32,7 +32,7 @@ const Post = ({ post }) => {
             <div className={postStyles.stack}>
               <h2>Stack</h2>
               <ul>
-                {post.stack.technology.map(technology => (
+                {post.stack.technology.map((technology) => (
                   <li>{technology.name}</li>
                 ))}
               </ul>
