@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding-top: 10vh;
 }
 
@@ -43,4 +43,8 @@ h6 {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.posts {
+  padding-top: 20rem;
 }
