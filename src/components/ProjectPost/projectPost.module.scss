@@ -213,6 +213,7 @@ pre {
 
     .title {
       margin-bottom: 0.5rem;
+      font-size: 2.2rem;
     }
   }
 
@@ -264,6 +265,12 @@ pre {
           padding: 0;
         }
       }
+    }
+  }
+
+  body {
+    p {
+      font-size: 1.7rem;
     }
   }
 }

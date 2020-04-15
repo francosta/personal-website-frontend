@@ -35,7 +35,10 @@ h6 {
   position: absolute;
   top: 25%;
   left: 0%;
-  // transform: translate(-50%, 0%, -50%, 0);
+
+  p {
+    font-size: 2.5rem;
+  }
 }
 
 .goToPosts {
@@ -47,6 +50,22 @@ h6 {
 
 .posts {
   padding-top: 20rem;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+.blinkingCursor {
+  animation: blink 1s step-end infinite;
+  font-size: 2.5rem;
+  margin-left: 0.2rem;
 }
 
 @media screen and (max-width: 850px) {
