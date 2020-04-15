@@ -11,7 +11,7 @@ import summaryIcon from '../../images/summary.svg';
 const Post = ({ post }) => {
   return (
     <div className={postStyles.container}>
-      <section>
+      <section className={postStyles.projectHeader}>
         <img
           className={postStyles.hero}
           src={`${post.hero.image.url}`}
