@@ -1,8 +1,8 @@
-import React from "react"
-import Layout from "../../components/Layout/layout"
-import blogStyles from "./blog.module.scss"
-import { useStaticQuery, graphql } from "gatsby"
-import CardGrid from "../../components/CardGrid/CardGrid"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Layout from '../../components/Layout/layout';
+import blogStyles from './blog.module.scss';
+import CardGrid from '../../components/CardGrid/CardGrid';
 
 const Blog = () => {
   const data = useStaticQuery(graphql`
@@ -29,9 +29,9 @@ const Blog = () => {
         }
       }
     }
-  `)
+  `);
 
-  const posts = data.allStrapiBlogPost.nodes
+  const posts = data.allStrapiBlogPost.nodes;
 
   return (
     <Layout>
@@ -39,7 +39,7 @@ const Blog = () => {
         <CardGrid posts={posts} />
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
