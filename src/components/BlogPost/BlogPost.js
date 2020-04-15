@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import postStyles from './blogPost.module.scss';
-import avatar from '../../images/relaxed-round.png';
+import avatar from '../../images/avatar.jpg';
 
 const Post = ({ post }) => {
   return (
