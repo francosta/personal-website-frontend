@@ -13,7 +13,7 @@ const About = () => {
     }
   `);
 
-  const { about_me, avatar } = data.strapiAbout;
+  const { about_me } = data.strapiAbout;
 
   return (
     <Layout>
