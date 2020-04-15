@@ -27,7 +27,7 @@
   margin-bottom: 5rem;
 }
 
-.summary-box {
+.summaryBox {
   display: flex;
   margin-top: 5rem;
   margin-bottom: 9rem;
@@ -38,7 +38,7 @@
     border-right: 1px solid #000000;
     justify-content: space-around;
 
-    .date-box {
+    .dateBox {
       display: flex;
       align-items: flex-start;
       align-self: flex-end;
@@ -52,7 +52,7 @@
       }
     }
 
-    .stack-box {
+    .stackBox {
       display: flex;
       align-items: flex-start;
       align-self: flex-end;
@@ -70,7 +70,7 @@
     }
   }
 
-  .summary-container {
+  .summaryContainer {
     display: flex;
     align-self: flex-start;
     padding-left: 2.8rem;
@@ -123,7 +123,7 @@
       color: #616160;
 
       .publishedDate::after {
-        content: " \b7\a0";
+        content: ' \b7\a0';
         margin: 0 0.5rem;
       }
     }
@@ -138,7 +138,7 @@
 blockquote {
   border-left: 3px solid #00cc8f;
   color: #1a1a1a;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: Georgia, Times, 'Times New Roman', serif;
   font-size: 1.25em;
   font-style: italic;
   line-height: 1.8em;
@@ -149,7 +149,7 @@ blockquote {
   z-index: 0;
 }
 blockquote:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: -4px;
@@ -164,7 +164,7 @@ blockquote:after {
   top: 50%;
   left: -0.5em;
   color: #00cc8f;
-  font-family: "Ionicons";
+  font-family: 'Ionicons';
   font-style: normal;
   line-height: 1em;
   text-align: center;
@@ -196,7 +196,7 @@ pre {
   word-wrap: break-word;
 
   code {
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     color: #666;
   }
 }
@@ -204,5 +204,66 @@ pre {
 @media screen and (max-width: 850px) {
   .container {
     width: 100%;
+  }
+
+  .projectHeader {
+    img {
+      margin-bottom: 2rem;
+    }
+
+    .title {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .summaryBox {
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+
+    .specs,
+    .summaryContainer {
+      padding: 0;
+      border-right: none;
+      align-self: flex-start;
+
+      img {
+        display: none;
+      }
+
+      .dateBox,
+      .stackBox {
+        display: flex;
+        margin: 0.5rem 0;
+        align-self: flex-start;
+
+        .date {
+          text-align: unset;
+          margin: 0;
+        }
+
+        .stack {
+          text-align: unset;
+          margin: 0;
+        }
+
+        h2 {
+          margin-right: 2rem;
+        }
+
+        ul {
+          list-style: none;
+        }
+      }
+
+      .summary {
+        margin: 0.5rem 0;
+        p {
+          font-size: 1.2rem;
+          padding: 0;
+        }
+      }
+    }
   }
 }
