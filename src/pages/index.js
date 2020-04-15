@@ -102,7 +102,7 @@ const IndexPage = () => {
           </a>
         </div>
       </section>
-      <section id="posts">
+      <section id="posts" className={indexStyles.posts}>
         <CardGrid posts={posts} />
       </section>
     </Layout>
