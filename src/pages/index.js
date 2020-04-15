@@ -70,7 +70,10 @@ const IndexPage = () => {
       <section id="landing">
         <div className={indexStyles.landing}>
           <div className={indexStyles.introduction}>
-            <p>{landingText}</p>
+            <p>
+              {landingText}
+              <span className={indexStyles.blinkingCursor}>|</span>
+            </p>
           </div>
           <a href="#posts" className={indexStyles.goToPosts}>
             <svg
