@@ -1,13 +1,14 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import ReactMarkdown from 'react-markdown';
 import postStyles from './blogPost.module.scss';
 import avatar from '../../images/avatar.jpg';
 
 const Post = ({ post }) => {
   return (
     <div className={postStyles.container}>
+      {console.log(post)}
       <img
         className={postStyles.hero}
         src={`${post.hero.image.url}`}
@@ -31,7 +32,7 @@ const Post = ({ post }) => {
           </div>
         </div>
       </div>
-      <ReactMarkdown className={postStyles.body} source={post.body} />
+      <ReactMarkdown className={postStyles.body}>{post.body}</ReactMarkdown>
     </div>
   );
 };

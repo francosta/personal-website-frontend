@@ -129,6 +129,17 @@ pre {
   }
 }
 
+.body {
+  p {
+    font-size: 1.7rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
 @media screen and (max-width: 850px) {
   .container {
     width: 100%;

@@ -49,7 +49,7 @@ const Post = ({ post }) => {
         </div>
       </section>
       <section>
-        <ReactMarkdown className={postStyles.body} source={post.body} />
+        <ReactMarkdown className={postStyles.body}>{post.body}</ReactMarkdown>
       </section>
     </div>
   );
