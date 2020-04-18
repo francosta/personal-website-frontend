@@ -8,10 +8,11 @@ import avatar from '../../images/avatar.jpg';
 const Post = ({ post }) => {
   return (
     <div className={postStyles.container}>
+      {console.log(post.hero)}
       <img
         className={postStyles.hero}
         src={`${post.hero.image.url}`}
-        alt={post.hero.image.altText}
+        alt={post.hero.altText}
       />
       <h1 className={postStyles.title}>{post.title}</h1>
       <h2 className={postStyles.description}>{post.description}</h2>

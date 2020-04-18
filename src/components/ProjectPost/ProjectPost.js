@@ -15,7 +15,7 @@ const Post = ({ post }) => {
         <img
           className={postStyles.hero}
           src={`${post.hero.image.url}`}
-          alt={post.hero.image.altText}
+          alt={post.hero.altText}
         />
         <h1 className={postStyles.title}>{post.title}</h1>
       </section>
