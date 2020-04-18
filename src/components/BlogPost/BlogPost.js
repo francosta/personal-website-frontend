@@ -8,7 +8,6 @@ import avatar from '../../images/avatar.jpg';
 const Post = ({ post }) => {
   return (
     <div className={postStyles.container}>
-      {console.log(post)}
       <img
         className={postStyles.hero}
         src={`${post.hero.image.url}`}
