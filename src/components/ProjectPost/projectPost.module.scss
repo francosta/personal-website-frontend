@@ -268,9 +268,14 @@ pre {
     }
   }
 
-  body {
+  .body {
     p {
       font-size: 1.7rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

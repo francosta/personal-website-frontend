@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import ReactMarkdown from 'react-markdown';
 import postStyles from './blogPost.module.scss';
 import avatar from '../../images/avatar.jpg';
 
@@ -17,7 +17,11 @@ const Post = ({ post }) => {
       <h2 className={postStyles.description}>{post.description}</h2>
       <div className={postStyles.details}>
         <Link to="/about">
-          <img className={postStyles.avatar} src={avatar} />
+          <img
+            className={postStyles.avatar}
+            src={avatar}
+            alt="Francisco Costa"
+          />
         </Link>
         <div className={postStyles.detailsBox}>
           <Link to="/about">
@@ -31,7 +35,7 @@ const Post = ({ post }) => {
           </div>
         </div>
       </div>
-      <ReactMarkdown className={postStyles.body} source={post.body} />
+      <ReactMarkdown className={postStyles.body}>{post.body}</ReactMarkdown>
     </div>
   );
 };
