@@ -20,7 +20,7 @@ const Card = ({ index, post }) => {
           <img
             className={cardStyles.image}
             src={`${post.hero.image.url}`}
-            alt={post.hero.image.altText}
+            alt={post.hero.altText}
           />
           <h1 className={cardStyles.postTitle}>{post.title}</h1>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -50,7 +50,7 @@ const Card = ({ index, post }) => {
           <img
             className={cardStyles.image}
             src={`${post.hero.image.url}`}
-            alt={post.hero.image.altText}
+            alt={post.hero.altText}
           />
           <h1 className={cardStyles.postTitle}>{post.title}</h1>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -80,7 +80,7 @@ const Card = ({ index, post }) => {
           <img
             className={cardStyles.image}
             src={`${post.hero.image.url}`}
-            alt={post.hero.image.altText}
+            alt={post.hero.altText}
           />
           <h1 className={cardStyles.postTitle}>{post.title}</h1>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -109,7 +109,7 @@ const Card = ({ index, post }) => {
         <img
           className={cardStyles.image}
           src={`${post.hero.image.url}`}
-          alt={post.hero.image.altText}
+          alt={post.hero.altText}
         />
         <h1 className={cardStyles.postTitle}>{post.title}</h1>
         <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -139,7 +139,7 @@ const Card = ({ index, post }) => {
   //         <img
   //           className={cardStyles.image}
   //           src={`${post.hero.image.url}`}
-  //           alt={post.hero.image.altText}
+  //           alt={post.hero.altText}
   //         />
   //         <h1 className={cardStyles.postTitle}>{post.title}</h1>
   //         <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
