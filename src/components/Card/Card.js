@@ -126,44 +126,6 @@ const Card = ({ index, post }) => {
       </div>
     </div>
   );
-
-  // } else {
-  //   let descriptionExcerpt = post.description
-  //   if (post.description.length > 100) {
-  //     descriptionExcerpt = post.description.substring(0, 97) + "..."
-  //   }
-
-  //   return (
-  //     <div className={`${cardStyles.card} ${cardStyles.card2} `}>
-  //       <Link to={`${post.fields.type}/${post.fields.slug}`}>
-  //         <img
-  //           className={cardStyles.image}
-  //           src={`${post.hero.image.url}`}
-  //           alt={post.hero.altText}
-  //         />
-  //         <h1 className={cardStyles.postTitle}>{post.title}</h1>
-  //         <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
-  //       </Link>
-  //       {post.fields.type === "blog" ? (
-  //         <div className={cardStyles.details}>
-  //           <ul>
-  //             <li className={cardStyles.postType}>{post.fields.type.charAt(0).toUpperCase() + post.fields.type.slice(1)}</li>
-  //             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-  //             <li>{Math.round(post.readingTime.minutes)}min read</li>
-  //           </ul>
-  //         </div>
-  //       ) : (
-  //         <div className={cardStyles.details}>
-  //           <ul>
-  //             <li className={cardStyles.postType}>Project</li>
-  //             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-  //             <li>{Math.round(post.readingTime.minutes)}min read</li>
-  //           </ul>
-  //         </div>
-  //       )}
-  //     </div>
-  //   )
-  // }
 };
 
 export default Card;
