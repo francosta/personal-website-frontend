@@ -72,7 +72,7 @@ const IndexPage = () => {
         <div className={indexStyles.landing}>
           <div className={indexStyles.introduction}>
             <p>
-              <ReactMarkdown source={landingText} />
+              <ReactMarkdown source={landingText} linkTarget="blank" />
               {/* {landingText} */}
               <span className={indexStyles.blinkingCursor}>|</span>
             </p>

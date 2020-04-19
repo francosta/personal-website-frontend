@@ -11,12 +11,14 @@
   padding-right: 96px;
   text-align: right;
   max-width: 35rem;
+  align-self: center;
 }
 
 .about-text {
   flex: 1 1 20rem;
   border-left: 1px solid #c5c5c5;
   padding-left: 96px;
+  align-self: center;
 }
 
 @media screen and (max-width: 1020px) {
