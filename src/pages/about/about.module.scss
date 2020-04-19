@@ -1,14 +1,14 @@
 .container {
   display: flex;
-  max-width: 70vw;
+  max-width: 80vw;
   margin: auto;
   flex-wrap: wrap;
-  padding-top: 20vh;
+  padding-top: 5vh;
 }
 
 .profile-picture {
   flex: 1 1 20rem;
-  padding-right: 96px;
+  padding-right: 8rem;
   text-align: right;
   max-width: 35rem;
   align-self: center;
@@ -17,11 +17,15 @@
 .about-text {
   flex: 1 1 20rem;
   border-left: 1px solid #c5c5c5;
-  padding-left: 96px;
+  padding-left: 8rem;
   align-self: center;
+
+  p {
+    margin: 2rem 0;
+  }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1250px) {
   .container {
     padding-top: 5rem;
     align-items: center;
