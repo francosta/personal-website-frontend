@@ -5,11 +5,33 @@
   padding-top: 5rem;
 }
 
-.title {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 3rem;
-  margin: 0rem 0rem 2.5rem 0rem;
+.titleContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-right: 1.5rem;
+  }
+
+  .networksContainer {
+    display: flex;
+  }
+
+  .networksContainer {
+    a {
+      align-self: center;
+    }
+
+    img {
+      max-height: 3rem;
+      margin-right: 1rem;
+      display: block;
+    }
+  }
 }
 
 .description {
@@ -229,7 +251,13 @@ pre {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1350px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
   .container {
     width: 100%;
   }
@@ -237,11 +265,34 @@ pre {
   .projectHeader {
     img {
       margin-bottom: 2rem;
+      display: block;
     }
 
-    .title {
+    .titleContainer {
       margin-bottom: 0.5rem;
-      font-size: 2.2rem;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      .title {
+        margin-right: 0;
+      }
+
+      .networksContainer {
+        display: flex;
+      }
+
+      .networksContainer {
+        a {
+          align-self: center;
+        }
+
+        img {
+          max-height: 2rem;
+          margin-right: 0.5rem;
+          margin-left: 0.5rem;
+          display: block;
+        }
+      }
     }
   }
 
