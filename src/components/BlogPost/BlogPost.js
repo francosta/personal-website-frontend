@@ -15,7 +15,7 @@ const Post = ({ post }) => {
       />
       <h1 className={postStyles.title}>{post.title}</h1>
       <h2 className={postStyles.description}>{post.description}</h2>
-      <div className={postStyles.details}>
+      {/* <div className={postStyles.details}>
         <Link to="/about">
           <img
             className={postStyles.avatar}
@@ -34,7 +34,7 @@ const Post = ({ post }) => {
             <span>{Math.round(post.readingTime.minutes)}min read</span>
           </div>
         </div>
-      </div>
+      </div> */}
       <ReactMarkdown className={postStyles.body}>{post.body}</ReactMarkdown>
     </div>
   );
