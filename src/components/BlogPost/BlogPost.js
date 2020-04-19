@@ -35,7 +35,7 @@ const Post = ({ post }) => {
           </div>
         </div>
       </div> */}
-      <ReactMarkdown className={postStyles.body}>{post.body}</ReactMarkdown>
+      <ReactMarkdown className={postStyles.body} source={post.body} />
     </div>
   );
 };
