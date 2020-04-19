@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 import styles from '../styles/index.scss';
 import indexStyles from './index.module.scss';
 import CardGrid from '../components/CardGrid/CardGrid';
+import ReactMarkdown from 'react-markdown';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -71,7 +72,8 @@ const IndexPage = () => {
         <div className={indexStyles.landing}>
           <div className={indexStyles.introduction}>
             <p>
-              {landingText}
+              <ReactMarkdown source={landingText} linkTarget="blank" />
+              {/* {landingText} */}
               <span className={indexStyles.blinkingCursor}>|</span>
             </p>
           </div>
