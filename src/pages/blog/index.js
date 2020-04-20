@@ -34,7 +34,7 @@ const Blog = ({ path }) => {
   const posts = data.allStrapiBlogPost.nodes;
 
   return (
-    <Layout>
+    <Layout path={path}>
       <section className={blogStyles.container}>
         <CardGrid path={path} posts={posts} />
       </section>

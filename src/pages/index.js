@@ -66,7 +66,7 @@ const IndexPage = ({ path }) => {
   const { landingText } = data.strapiLandingPage;
 
   return (
-    <Layout>
+    <Layout path={path}>
       <SEO title="Home" />
       <section id="landing">
         <div className={indexStyles.landing}>
