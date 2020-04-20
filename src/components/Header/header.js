@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Navbar from '../Navbar/navbar';
 import { Helmet } from 'react-helmet';
 import favicon from '../../images/code-icon.svg';
 
