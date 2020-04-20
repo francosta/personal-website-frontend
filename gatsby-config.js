@@ -47,11 +47,11 @@ module.exports = {
         },
         types: {
           // Key: GraphQL Type to add reading times to, Value: Resolver function takes source node of Defined GraphQL type and returns content to be processed.
-          StrapiBlogPost: (source) => {
+          StrapiBlogPost: source => {
             const { body } = source;
             return body;
           },
-          StrapiProject: (source) => {
+          StrapiProject: source => {
             const { body } = source;
             return body;
           },

@@ -7,6 +7,8 @@ import postStyles from './projectPost.module.scss';
 import dateIcon from '../../images/date.svg';
 import stackIcon from '../../images/code-icon.svg';
 import summaryIcon from '../../images/summary.svg';
+import Github from '../../images/logos/github.jpg';
+import Youtube from '../../images/logos/youtube.jpg';
 
 const Post = ({ post }) => {
   return (
@@ -17,7 +19,21 @@ const Post = ({ post }) => {
           src={`${post.hero.image.url}`}
           alt={post.hero.altText}
         />
-        <h1 className={postStyles.title}>{post.title}</h1>
+        <div className={postStyles.titleContainer}>
+          <h1 className={postStyles.title}>{post.title}</h1>
+          <div className={postStyles.networksContainer}>
+            {post.networks.map((network, index) => {
+              return (
+                <a index={index} href={network.link} target="blank">
+                  <img
+                    src={network.network === 'Github' ? Github : Youtube}
+                    alt="Network logo"
+                  ></img>
+                </a>
+              );
+            })}
+          </div>
+        </div>
       </section>
       <section className={postStyles.summaryBox}>
         <div className={postStyles.specs}>
@@ -32,7 +48,7 @@ const Post = ({ post }) => {
             <div className={postStyles.stack}>
               <h2>Stack</h2>
               <ul>
-                {post.stack.technology.map((technology) => (
+                {post.stack.technology.map(technology => (
                   <li>{technology.name}</li>
                 ))}
               </ul>
