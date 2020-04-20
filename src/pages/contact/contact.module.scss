@@ -3,6 +3,16 @@
   max-width: 70vw;
   margin-left: 10vw;
   padding-top: 30vh;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 form {
