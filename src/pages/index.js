@@ -1,14 +1,14 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import ReactMarkdown from 'react-markdown';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
 import styles from '../styles/index.scss';
 import indexStyles from './index.module.scss';
 import CardGrid from '../components/CardGrid/CardGrid';
-import ReactMarkdown from 'react-markdown';
 
-const IndexPage = () => {
+const IndexPage = ({ path }) => {
   const data = useStaticQuery(graphql`
     query {
       allStrapiBlogPost {
@@ -108,7 +108,7 @@ const IndexPage = () => {
         </div>
       </section>
       <section id="posts" className={indexStyles.posts}>
-        <CardGrid posts={posts} />
+        <CardGrid path={path} posts={posts} />
       </section>
     </Layout>
   );

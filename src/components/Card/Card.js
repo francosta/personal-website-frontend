@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import cardStyles from './card.module.scss';
 
-const Card = ({ index, post }) => {
+const Card = ({ index, post, path }) => {
   const structure = [1, 2, 3, 4]; // should be an enum?
   const ind = index % structure.length;
   const selector = structure[ind];
@@ -16,6 +16,7 @@ const Card = ({ index, post }) => {
 
     return (
       <div className={`${cardStyles.card} ${cardStyles.card1Left}`}>
+        {console.log(path)}
         <Link to={`${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
@@ -23,10 +24,12 @@ const Card = ({ index, post }) => {
             alt={post.hero.altText}
           />
           <div className={cardStyles.titleContainer}>
-            <div className={cardStyles.postType}>
-              {post.fields.type.charAt(0).toUpperCase() +
-                post.fields.type.slice(1)}
-            </div>
+            {path === '/' ? (
+              <div className={cardStyles.postType}>
+                {post.fields.type.charAt(0).toUpperCase() +
+                  post.fields.type.slice(1)}
+              </div>
+            ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
           </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -55,10 +58,12 @@ const Card = ({ index, post }) => {
             alt={post.hero.altText}
           />
           <div className={cardStyles.titleContainer}>
-            <div className={cardStyles.postType}>
-              {post.fields.type.charAt(0).toUpperCase() +
-                post.fields.type.slice(1)}
-            </div>
+            {path === '/' ? (
+              <div className={cardStyles.postType}>
+                {post.fields.type.charAt(0).toUpperCase() +
+                  post.fields.type.slice(1)}
+              </div>
+            ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
           </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -87,10 +92,12 @@ const Card = ({ index, post }) => {
             alt={post.hero.altText}
           />
           <div className={cardStyles.titleContainer}>
-            <div className={cardStyles.postType}>
-              {post.fields.type.charAt(0).toUpperCase() +
-                post.fields.type.slice(1)}
-            </div>
+            {path === '/' ? (
+              <div className={cardStyles.postType}>
+                {post.fields.type.charAt(0).toUpperCase() +
+                  post.fields.type.slice(1)}
+              </div>
+            ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
           </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -118,10 +125,12 @@ const Card = ({ index, post }) => {
           alt={post.hero.altText}
         />
         <div className={cardStyles.titleContainer}>
-          <div className={cardStyles.postType}>
-            {post.fields.type.charAt(0).toUpperCase() +
-              post.fields.type.slice(1)}
-          </div>
+          {path === '/' ? (
+            <div className={cardStyles.postType}>
+              {post.fields.type.charAt(0).toUpperCase() +
+                post.fields.type.slice(1)}
+            </div>
+          ) : null}
           <h1 className={cardStyles.postTitle}>{post.title}</h1>
         </div>
         <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>

@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
     <div className={layoutStyles.container}>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <Navbar />
-      <main class={layoutStyles.main}>{children}</main>
+      <main className={layoutStyles.main}>{children}</main>
       <Footer class={layoutStyles.footer} />
     </div>
   );
