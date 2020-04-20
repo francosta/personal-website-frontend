@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import ReactMarkdown from 'react-markdown';
 import Layout from '../../components/Layout/layout';
 import aboutStyles from './about.module.scss';
-import ReactMarkdown from 'react-markdown';
 import avatar from '../../images/avatar.jpg';
 
 const About = () => {
@@ -20,7 +20,11 @@ const About = () => {
     <Layout>
       <div className={aboutStyles.container}>
         <div className={aboutStyles.profilePicture}>
-          <img className={aboutStyles.profilePicture} src={avatar} />
+          <img
+            className={aboutStyles.profilePicture}
+            src={avatar}
+            alt="Francisco Costa"
+          />
         </div>
         <div className={aboutStyles.aboutText}>
           <ReactMarkdown source={about_me} linkTarget="blank" />

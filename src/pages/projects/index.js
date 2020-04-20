@@ -4,7 +4,7 @@ import Layout from '../../components/Layout/layout';
 import blogStyles from './blog.module.scss';
 import CardGrid from '../../components/CardGrid/CardGrid';
 
-const Blog = () => {
+const Blog = ({ path }) => {
   const data = useStaticQuery(graphql`
     query {
       allStrapiProject {
@@ -45,7 +45,7 @@ const Blog = () => {
   return (
     <Layout>
       <section className={blogStyles.container}>
-        <CardGrid posts={posts} />
+        <CardGrid path={path} posts={posts} />
       </section>
     </Layout>
   );

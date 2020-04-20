@@ -1,5 +1,4 @@
 import React from 'react';
-import footerStyles from './footer.module.scss';
 import linkedinLogo from '../../images/linkedin.png';
 import githubLogo from '../../images/github.png';
 
