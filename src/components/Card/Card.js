@@ -22,17 +22,19 @@ const Card = ({ index, post }) => {
             src={`${post.hero.image.url}`}
             alt={post.hero.altText}
           />
-          <h1 className={cardStyles.postTitle}>{post.title}</h1>
+          <div className={cardStyles.titleContainer}>
+            <div className={cardStyles.postType}>
+              {post.fields.type.charAt(0).toUpperCase() +
+                post.fields.type.slice(1)}
+            </div>
+            <h1 className={cardStyles.postTitle}>{post.title}</h1>
+          </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
         </Link>
         <div className={cardStyles.details}>
           <ul>
-            <li className={cardStyles.postType}>
-              {post.fields.type.charAt(0).toUpperCase() +
-                post.fields.type.slice(1)}
-            </li>
             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-            <li>{Math.round(post.readingTime.minutes)}min read</li>
+            <li>{Math.round(post.readingTime.minutes)} mins read</li>
           </ul>
         </div>
       </div>
@@ -52,17 +54,19 @@ const Card = ({ index, post }) => {
             src={`${post.hero.image.url}`}
             alt={post.hero.altText}
           />
-          <h1 className={cardStyles.postTitle}>{post.title}</h1>
+          <div className={cardStyles.titleContainer}>
+            <div className={cardStyles.postType}>
+              {post.fields.type.charAt(0).toUpperCase() +
+                post.fields.type.slice(1)}
+            </div>
+            <h1 className={cardStyles.postTitle}>{post.title}</h1>
+          </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
         </Link>
         <div className={cardStyles.details}>
           <ul>
-            <li className={cardStyles.postType}>
-              {post.fields.type.charAt(0).toUpperCase() +
-                post.fields.type.slice(1)}
-            </li>
             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-            <li>{Math.round(post.readingTime.minutes)}min read</li>
+            <li>{Math.round(post.readingTime.minutes)} mins read</li>
           </ul>
         </div>
       </div>
@@ -82,17 +86,19 @@ const Card = ({ index, post }) => {
             src={`${post.hero.image.url}`}
             alt={post.hero.altText}
           />
-          <h1 className={cardStyles.postTitle}>{post.title}</h1>
+          <div className={cardStyles.titleContainer}>
+            <div className={cardStyles.postType}>
+              {post.fields.type.charAt(0).toUpperCase() +
+                post.fields.type.slice(1)}
+            </div>
+            <h1 className={cardStyles.postTitle}>{post.title}</h1>
+          </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
         </Link>
         <div className={cardStyles.details}>
           <ul>
-            <li className={cardStyles.postType}>
-              {post.fields.type.charAt(0).toUpperCase() +
-                post.fields.type.slice(1)}
-            </li>
             <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-            <li>{Math.round(post.readingTime.minutes)}min read</li>
+            <li>{Math.round(post.readingTime.minutes)} mins read</li>
           </ul>
         </div>
       </div>
@@ -111,7 +117,13 @@ const Card = ({ index, post }) => {
           src={`${post.hero.image.url}`}
           alt={post.hero.altText}
         />
-        <h1 className={cardStyles.postTitle}>{post.title}</h1>
+        <div className={cardStyles.titleContainer}>
+          <div className={cardStyles.postType}>
+            {post.fields.type.charAt(0).toUpperCase() +
+              post.fields.type.slice(1)}
+          </div>
+          <h1 className={cardStyles.postTitle}>{post.title}</h1>
+        </div>
         <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
       </Link>
       <div className={cardStyles.details}>
@@ -121,7 +133,7 @@ const Card = ({ index, post }) => {
               post.fields.type.slice(1)}
           </li>
           <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-          <li>{Math.round(post.readingTime.minutes)}min read</li>
+          <li>{Math.round(post.readingTime.minutes)} mins read</li>
         </ul>
       </div>
     </div>
