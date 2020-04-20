@@ -136,10 +136,6 @@ const Card = ({ index, post, path }) => {
       </Link>
       <div className={cardStyles.details}>
         <ul>
-          <li className={cardStyles.postType}>
-            {post.fields.type.charAt(0).toUpperCase() +
-              post.fields.type.slice(1)}
-          </li>
           <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
           <li>{Math.round(post.readingTime.minutes)} mins read</li>
         </ul>
