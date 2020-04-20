@@ -1,3 +1,43 @@
 .container {
   display: flex;
+  max-width: 70vw;
+  margin-left: 10vw;
+  padding-top: 30vh;
+}
+
+form {
+  min-width: 40vw;
+  margin-left: 5rem;
+
+  .name-form,
+  .email-form,
+  .message-form {
+    text-align: right;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 0rem 1rem;
+  }
+
+  input {
+    line-height: 3rem;
+    min-width: 30vw;
+    padding: 0 2rem;
+  }
+
+  button {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    flex-wrap: wrap;
+  }
 }

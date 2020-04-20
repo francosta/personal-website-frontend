@@ -11,12 +11,18 @@ const Contact = ({ path }) => {
           Alternatively, you can also reach me at francisco@fcosta.pt
         </p>
         <form>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" />
-          <label htmlFor="email">Email</label>
-          <input type="text" id="email" name="email" />
-          <label htmlFor="message">Message</label>
-          <input type="text" id="message" name="message" />
+          <div className={contactStyles.nameForm}>
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div className={contactStyles.emailForm}>
+            <label htmlFor="email">Email</label>
+            <input type="text" id="email" name="email" />
+          </div>
+          <div className={contactStyles.messageForm}>
+            <label htmlFor="message">Message</label>
+            <input type="text" id="message" name="message" />
+          </div>
           <button type="submit">send</button>
         </form>
       </div>
