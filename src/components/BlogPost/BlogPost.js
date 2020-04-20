@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 import postStyles from './blogPost.module.scss';
-import avatar from '../../images/avatar.jpg';
 
 const Post = ({ post }) => {
   return (
@@ -38,10 +35,6 @@ const Post = ({ post }) => {
       <ReactMarkdown className={postStyles.body} source={post.body} />
     </div>
   );
-};
-
-Post.propTypes = {
-  post: PropTypes.element.isRequired,
 };
 
 export default Post;

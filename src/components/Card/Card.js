@@ -16,8 +16,7 @@ const Card = ({ index, post, path }) => {
 
     return (
       <div className={`${cardStyles.card} ${cardStyles.card1Left}`}>
-        {console.log(path)}
-        <Link to={`${post.fields.type}/${post.fields.slug}`}>
+        <Link to={`/${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
             src={`${post.hero.image.url}`}
@@ -51,7 +50,7 @@ const Card = ({ index, post, path }) => {
 
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2Right}`}>
-        <Link to={`${post.fields.type}/${post.fields.slug}`}>
+        <Link to={`/${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
             src={`${post.hero.image.url}`}
@@ -85,7 +84,7 @@ const Card = ({ index, post, path }) => {
 
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2Left}`}>
-        <Link to={`${post.fields.type}/${post.fields.slug}`}>
+        <Link to={`/${post.fields.type}/${post.fields.slug}`}>
           <img
             className={cardStyles.image}
             src={`${post.hero.image.url}`}
@@ -118,7 +117,7 @@ const Card = ({ index, post, path }) => {
 
   return (
     <div className={`${cardStyles.card} ${cardStyles.card1Right}`}>
-      <Link to={`${post.fields.type}/${post.fields.slug}`}>
+      <Link to={`/${post.fields.type}/${post.fields.slug}`}>
         <img
           className={cardStyles.image}
           src={`${post.hero.image.url}`}

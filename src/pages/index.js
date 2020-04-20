@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
-import styles from '../styles/index.scss';
+// import styles from '../styles/index.scss';
 import indexStyles from './index.module.scss';
 import CardGrid from '../components/CardGrid/CardGrid';
 
@@ -72,10 +72,14 @@ const IndexPage = ({ path }) => {
         <div className={indexStyles.landing}>
           <div className={indexStyles.introduction}>
             <p>
-              <ReactMarkdown source={landingText} linkTarget="blank" />
+              <ReactMarkdown
+                className={indexStyles.text}
+                source={landingText}
+                linkTarget="blank"
+              />
               {/* {landingText} */}
-              <span className={indexStyles.blinkingCursor}>|</span>
             </p>
+            <span className={indexStyles.blinkingCursor}>|</span>
           </div>
           <a href="#posts" className={indexStyles.goToPosts}>
             <svg

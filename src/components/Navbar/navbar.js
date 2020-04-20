@@ -35,7 +35,10 @@ const Navbar = () => {
         <div
           id="burger"
           onClick={activateResponsiveMenu}
+          onKeyDown={activateResponsiveMenu}
           className={navbarStyles.burger}
+          role="menu"
+          tabIndex={0}
         >
           <div className={navbarStyles.line1} />
           <div className={navbarStyles.line2} />
