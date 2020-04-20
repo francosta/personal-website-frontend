@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import navbarStyles from './navbar.module.scss';
 
-const Navbar = () => {
+const Navbar = ({ path }) => {
   const activateResponsiveMenu = () => {
     const navbarLinks = document.querySelector('#navbarLinks');
     navbarLinks.classList.toggle(navbarStyles.navbarResponsive);
@@ -19,16 +19,44 @@ const Navbar = () => {
           </Link>
         </div>
         <ul id="navbarLinks" className={`${navbarStyles.navbarLinks}`}>
-          <li>
+          <li
+            className={
+              path !== '/' &&
+              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'about'
+                ? `${navbarStyles.active}`
+                : null
+            }
+          >
             <Link to="/about">About</Link>
           </li>
-          <li>
+          <li
+            className={
+              path !== '/' &&
+              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'blog'
+                ? `${navbarStyles.active}`
+                : null
+            }
+          >
             <Link to="/blog">Blog</Link>
           </li>
-          <li>
+          <li
+            className={
+              path !== '/' &&
+              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'projects'
+                ? `${navbarStyles.active}`
+                : null
+            }
+          >
             <Link to="/projects">Projects</Link>
           </li>
-          <li>
+          <li
+            className={
+              path !== '/' &&
+              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'contact'
+                ? `${navbarStyles.active}`
+                : null
+            }
+          >
             <Link to="/">Contact</Link>
           </li>
         </ul>
