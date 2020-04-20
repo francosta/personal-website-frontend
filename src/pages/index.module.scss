@@ -73,3 +73,34 @@ h6 {
     padding-top: 15rem;
   }
 }
+
+// Landing introduction for mobile
+@media screen and (max-width: 450px) {
+  .introduction {
+    top: 13%;
+
+    p {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .introduction {
+    top: 10%;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .introduction {
+    top: 10%;
+
+    p {
+      font-size: 1.7rem;
+    }
+  }
+}
