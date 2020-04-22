@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  padding-top: 5vh;
+  animation: fadein 1s;
+  margin-left: 10vw;
+  padding-top: 30vh;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+form {
+  min-width: 40vw;
+  text-align: right;
+
+  .name-form,
+  .email-form,
+  .message-form {
+    text-align: right;
+    margin-bottom: 1rem;
+
+    label {
+      font-size: 2rem;
+      line-height: 3rem;
+      margin: 0rem 1rem;
+      vertical-align: top;
+    }
+    input {
+      line-height: 3rem;
+      width: 70%;
+      min-width: 40rem;
+      padding: 0 1rem;
+      font-size: 1.5rem;
+      border-color: rgb(238, 238, 238);
+      border-width: 1px;
+    }
+
+    textarea {
+      min-height: 20rem;
+      line-height: 3rem;
+      min-width: 40rem;
+      width: 70%;
+      padding: 0 1rem;
+      font-size: 1.5rem;
+      border-color: rgb(238, 238, 238);
+      border-width: 1px;
+    }
+  }
+
+  button {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    line-height: 3rem;
+    min-width: 40rem;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    padding-top: 5rem;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    align-self: center;
+  }
+
+  .message {
+    width: 100%;
+  }
+
+  form {
+    margin-top: 5rem;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+
+    .name-form,
+    .email-form,
+    .message-form {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      label {
+        margin-left: 0;
+        min-width: 0;
+      }
+      input {
+        min-width: 0;
+        width: 100%;
+      }
+      textarea {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+
+    button {
+      align-self: center;
+      width: 100%;
+      min-width: 0;
+    }
+  }
+}
