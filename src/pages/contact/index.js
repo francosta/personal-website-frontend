@@ -21,7 +21,7 @@ const Contact = ({ path }) => {
           </div>
           <div className={contactStyles.messageForm}>
             <label htmlFor="message">Message</label>
-            <input type="text" id="message" name="message" />
+            <textarea type="text" id="message" name="message" />
           </div>
           <button type="submit">send</button>
         </form>
