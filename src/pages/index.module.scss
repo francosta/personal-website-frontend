@@ -28,6 +28,16 @@ h6 {
   flex-direction: column;
   position: relative;
   padding-top: 100vh;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .introduction {
