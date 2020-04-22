@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  max-width: 80vw;
+  max-width: 80%;
   margin: auto;
   padding-top: 5vh;
   animation: fadein 1s;
@@ -76,24 +76,41 @@ form {
     align-self: center;
   }
 
+  .message {
+    width: 100%;
+  }
+
   form {
     margin-top: 5rem;
     margin-left: 0;
     text-align: center;
-    max-width: 50%;
+    width: 100%;
 
     .name-form,
     .email-form,
     .message-form {
+      display: flex;
+      flex-direction: column;
       text-align: center;
+
       label {
         margin-left: 0;
         min-width: 0;
+      }
+      input {
+        min-width: 0;
+        width: 100%;
+      }
+      textarea {
+        min-width: 0;
+        width: 100%;
       }
     }
 
     button {
       align-self: center;
+      width: 100%;
+      min-width: 0;
     }
   }
 }
