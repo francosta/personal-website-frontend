@@ -20,12 +20,12 @@ const Navbar = ({ path }) => {
         </div>
         <ul id="navbarLinks" className={`${navbarStyles.navbarLinks}`}>
           <li
-            className={
-              path !== '/' &&
-              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'about'
-                ? `${navbarStyles.active}`
-                : null
-            }
+          // className={
+          //   path !== '/' &&
+          //   path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'about'
+          //     ? `${navbarStyles.active}`
+          //     : null
+          // }
           >
             <Link to="/about">About</Link>
           </li>
