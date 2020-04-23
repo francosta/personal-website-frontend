@@ -15,7 +15,7 @@ import Header from '../Header/header';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/navbar';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,9 +28,9 @@ const Layout = ({ children }) => {
 
   return (
     <div className={layoutStyles.container}>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <Navbar />
-      <main class={layoutStyles.main}>{children}</main>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <Navbar path={path} />
+      <main className={layoutStyles.main}>{children}</main>
       <Footer class={layoutStyles.footer} />
     </div>
   );

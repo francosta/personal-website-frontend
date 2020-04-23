@@ -28,6 +28,16 @@ h6 {
   flex-direction: column;
   position: relative;
   padding-top: 100vh;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .introduction {
@@ -70,11 +80,37 @@ h6 {
 
 @media screen and (max-width: 1800px) {
   .posts {
-    padding-top: 13rem;
+    padding-top: 15rem;
   }
 }
-@media screen and (max-width: 1600px) {
-  .posts {
-    padding-top: 12rem;
+
+// Landing introduction for mobile
+@media screen and (max-width: 450px) {
+  .introduction {
+    top: 13%;
+
+    p {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .introduction {
+    top: 10%;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .introduction {
+    top: 10%;
+
+    p {
+      font-size: 1.7rem;
+    }
   }
 }

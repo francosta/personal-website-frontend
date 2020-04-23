@@ -1,13 +1,13 @@
-import React from "react"
-import Layout from "../components/Layout/layout"
-import Post from "../components/BlogPost/BlogPost"
+import React from 'react';
+import Layout from '../components/Layout/layout';
+import Post from '../components/BlogPost/BlogPost';
 
-const BlogPost = ({ pageContext }) => {
+const BlogPost = ({ pageContext, path }) => {
   return (
-    <Layout>
+    <Layout path={path}>
       <Post post={pageContext.post} />
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;

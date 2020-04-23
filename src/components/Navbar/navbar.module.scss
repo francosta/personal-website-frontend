@@ -61,6 +61,12 @@ nav {
   a:hover {
     color: #6a6a6a;
   }
+
+  li.active {
+    a {
+      color: #6a6a6a;
+    }
+  }
 }
 
 .burger {

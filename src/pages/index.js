@@ -1,14 +1,14 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import ReactMarkdown from 'react-markdown';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
-import styles from '../styles/index.scss';
+// import styles from '../styles/index.scss';
 import indexStyles from './index.module.scss';
 import CardGrid from '../components/CardGrid/CardGrid';
-import ReactMarkdown from 'react-markdown';
 
-const IndexPage = () => {
+const IndexPage = ({ path }) => {
   const data = useStaticQuery(graphql`
     query {
       allStrapiBlogPost {
@@ -66,16 +66,20 @@ const IndexPage = () => {
   const { landingText } = data.strapiLandingPage;
 
   return (
-    <Layout>
+    <Layout path={path}>
       <SEO title="Home" />
       <section id="landing">
         <div className={indexStyles.landing}>
           <div className={indexStyles.introduction}>
             <p>
-              <ReactMarkdown source={landingText} linkTarget="blank" />
+              <ReactMarkdown
+                className={indexStyles.text}
+                source={landingText}
+                linkTarget="blank"
+              />
               {/* {landingText} */}
-              <span className={indexStyles.blinkingCursor}>|</span>
             </p>
+            <span className={indexStyles.blinkingCursor}>|</span>
           </div>
           <a href="#posts" className={indexStyles.goToPosts}>
             <svg
@@ -108,7 +112,7 @@ const IndexPage = () => {
         </div>
       </section>
       <section id="posts" className={indexStyles.posts}>
-        <CardGrid posts={posts} />
+        <CardGrid path={path} posts={posts} />
       </section>
     </Layout>
   );

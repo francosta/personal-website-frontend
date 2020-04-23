@@ -1,11 +1,11 @@
 import React from 'react';
-import footerStyles from './footer.module.scss';
 import linkedinLogo from '../../images/linkedin.png';
 import githubLogo from '../../images/github.png';
+import footerStyles from './footer.module.scss';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={footerStyles.footer}>
       <a href="https://github.com/francosta/" target="blank">
         <img src={githubLogo} alt="Gitub logo" />
         <h1>Github</h1>
