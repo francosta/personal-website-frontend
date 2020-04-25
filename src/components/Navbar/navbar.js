@@ -20,42 +20,42 @@ const Navbar = ({ path }) => {
         </div>
         <ul id="navbarLinks" className={`${navbarStyles.navbarLinks}`}>
           <li
-            className={
-              path !== '/' &&
-              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'about'
-                ? `${navbarStyles.active}`
-                : null
-            }
+          // className={
+          //   path !== '/' &&
+          //   path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'about'
+          //     ? `${navbarStyles.active}`
+          //     : null
+          // }
           >
             <Link to="/about">About</Link>
           </li>
           <li
-            className={
-              path !== '/' &&
-              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'blog'
-                ? `${navbarStyles.active}`
-                : null
-            }
+          // className={
+          //   path !== '/' &&
+          //   path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'blog'
+          //     ? `${navbarStyles.active}`
+          //     : null
+          // }
           >
             <Link to="/blog">Blog</Link>
           </li>
           <li
-            className={
-              path !== '/' &&
-              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'projects'
-                ? `${navbarStyles.active}`
-                : null
-            }
+          // className={
+          //   path !== '/' &&
+          //   path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'projects'
+          //     ? `${navbarStyles.active}`
+          //     : null
+          // }
           >
             <Link to="/projects">Projects</Link>
           </li>
           <li
-            className={
-              path !== '/' &&
-              path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'contact'
-                ? `${navbarStyles.active}`
-                : null
-            }
+          // className={
+          //   path !== '/' &&
+          //   path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'contact'
+          //     ? `${navbarStyles.active}`
+          //     : null
+          // }
           >
             <Link to="/contact">Contact</Link>
           </li>
