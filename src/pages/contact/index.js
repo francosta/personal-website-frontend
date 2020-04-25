@@ -63,7 +63,7 @@ const Contact = ({ path }) => {
             Leave me a message and I’ll get back to you as soon as possible.
             Alternatively, you can also reach me at francisco@fcosta.pt
           </p>
-          <form onSubmit={handleSubmit}>
+          <form name="contact" onSubmit={handleSubmit}>
             <input type="hidden" name="contact" value="contact" />
             <div className={contactStyles.nameForm}>
               <label htmlFor="name">Name</label>
