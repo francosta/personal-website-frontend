@@ -9,16 +9,26 @@ const Contact = ({ path }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+
+    const encode = data => {
+      return Object.keys(data)
+        .map(
+          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+    };
+
     const formData = {
       name: e.target.name.value,
       email: e.target.email.value,
       message: e.target.message.value,
     };
+    console.log(encode({ 'form-name': 'Contact Form', formData }));
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formData,
+      body: encode({ 'form-name': 'Contact Form', formData }),
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
@@ -55,7 +65,7 @@ const Contact = ({ path }) => {
             Leave me a message and I’ll get back to you as soon as possible.
             Alternatively, you can also reach me at francisco@fcosta.pt
           </p>
-          <form method="POST" data-netlify="true">
+          <form onSubmit={handleSubmit}>
             <input type="hidden" name="Contact Form" value="contact" />
             <input type="hidden" name="bot-field" />
             <div className={contactStyles.nameForm}>
