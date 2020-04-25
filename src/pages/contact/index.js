@@ -25,11 +25,12 @@ const Contact = ({ path }) => {
     };
     console.log(encode({ 'form-name': 'contact', ...formData }));
 
-    fetch('/', {
+    const resp = await fetch('/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...formData }),
     })
+      .then(resp => console.log(resp))
       .then(() => alert('Success!'))
       .catch(error => alert(error));
 
