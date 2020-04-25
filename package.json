@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@sendgrid/mail": "^7.0.1",
     "env-cmd": "^10.1.0",
     "formik": "^2.1.4",
     "gatsby": "^2.19.7",
