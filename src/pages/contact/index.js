@@ -23,12 +23,12 @@ const Contact = ({ path }) => {
       email: e.target.email.value,
       message: e.target.message.value,
     };
-    console.log(encode({ 'form-name': 'Contact Form', ...formData }));
+    console.log(encode({ 'form-name': 'contact', ...formData }));
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'Contact Form', ...formData }),
+      body: encode({ 'form-name': 'contact', ...formData }),
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
