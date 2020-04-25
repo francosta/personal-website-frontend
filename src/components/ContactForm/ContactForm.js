@@ -26,7 +26,6 @@ const ContactForm = () => {
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        console.log('Sent');
         setSubmitting(false);
       }}
     >
