@@ -5,7 +5,7 @@ const ContactForm = () => {
   return (
     <Formik
       initialValues={{ name: '', email: '', message: '' }}
-      validate={(values) => {
+      validate={values => {
         const errors = {};
 
         if (!values.name) {
@@ -26,23 +26,15 @@ const ContactForm = () => {
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
-        const url = `https://getform.io/f/${process.env.EMAIL_API}`;
-
-        const options = {
-          method: 'POST',
-          data: values,
-        };
-
-        return fetch(
-          'https://api.getform.io/v1/forms/4ec6a29c-a3b6-4433-97a7-0cba14c0f644?token=AgzjhzDSeVeem7RqahAr8WEm4Xs9fcQG7r2VaCYjF6Lm6q3jZigVYidYbFrZ',
-          options
-        )
-          .then((resp) => console.log(resp))
-          .then(setSubmitting(false));
+        console.log('Sent');
+        setSubmitting(false);
       }}
     >
       {({ isSubmitting }) => (
-        <Form>
+        <Form data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
+
           <div>
             <label htmlFor="name">Name</label>
             <Field type="name" name="name" />
