@@ -28,7 +28,7 @@ const Contact = ({ path }) => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', formData }),
+      body: encode({ 'form-name': 'Contact Form', ...formData }),
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
