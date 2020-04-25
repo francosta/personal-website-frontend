@@ -9,25 +9,25 @@ const Contact = ({ path }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
-    console.log(formData);
+    // const formData = {
+    //   name: e.target.name.value,
+    //   email: e.target.email.value,
+    //   message: e.target.message.value,
+    // };
+    // console.log(formData);
 
-    const url = `https://formspree.io/${process.env.EMAIL_API}`;
+    // const url = `https://formspree.io/${process.env.EMAIL_API}`;
 
-    try {
-      const resp = await fetch(url, {
-        method: 'POST',
-        body: formData,
-      });
-      console.log(resp);
-      await setMessageSent(true);
-    } catch (e) {
-      setError("Something's gone wrong! I'm sorry. Please try again later :)");
-    }
+    // try {
+    //   const resp = await fetch(url, {
+    //     method: 'POST',
+    //     body: formData,
+    //   });
+    //   console.log(resp);
+    await setMessageSent(true);
+    // } catch (e) {
+    //   setError("Something's gone wrong! I'm sorry. Please try again later :)");
+    // }
   };
 
   return (
@@ -46,7 +46,13 @@ const Contact = ({ path }) => {
             Leave me a message and I’ll get back to you as soon as possible.
             Alternatively, you can also reach me at francisco@fcosta.pt
           </p>
-          <form onSubmit={handleSubmit}>
+          <form
+            method="post"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="bot-field" />
             <div className={contactStyles.nameForm}>
               <label htmlFor="name">Name</label>
               <input type="text" id="name" name="name" />
