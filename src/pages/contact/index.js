@@ -8,6 +8,7 @@ const Contact = ({ path }) => {
   const [error, setError] = useState('');
 
   const handleSubmit = async e => {
+    console.log('RUNNNNING!!!');
     e.preventDefault();
 
     const encode = data => {
