@@ -1,7 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import axios from 'axios';
+import contactStyles from './contactForm.module.scss';
 
-const ContactForm = () => {
+const ContactForm = ({ setMessageSent, setError }) => {
   return (
     <Formik
       initialValues={{ name: '', email: '', message: '' }}
@@ -25,28 +27,43 @@ const ContactForm = () => {
         }
         return errors;
       }}
-      onSubmit={(values, { setSubmitting }) => {
-        setSubmitting(false);
+      onSubmit={async (values, { setSubmitting }) => {
+        setSubmitting();
+        const formData = {
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        };
+
+        const url = `https://getform.io/f/${process.env.EMAIL_API}`;
+
+        try {
+          await axios.post(url, formData, {
+            headers: { Accept: 'application/json' },
+          });
+          await setMessageSent(true);
+        } catch (e) {
+          setError(
+            "Something's gone wrong! I'm sorry. Please try again later :)"
+          );
+        }
       }}
     >
       {({ isSubmitting }) => (
-        <Form data-netlify="true" data-netlify-honeypot="bot-field">
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
-
-          <div>
+        <Form>
+          <div className={contactStyles.nameForm}>
             <label htmlFor="name">Name</label>
             <Field type="name" name="name" />
             <ErrorMessage name="name" component="div" />
           </div>
-          <div>
+          <div className={contactStyles.emailForm}>
             <label htmlFor="email">Email</label>
             <Field type="email" name="email" />
             <ErrorMessage name="email" component="div" />
           </div>
-          <div>
+          <div className={contactStyles.messageForm}>
             <label htmlFor="email">Message</label>
-            <Field type="message" name="message" />
+            <Field type="message" name="message" component="textarea" />
             <ErrorMessage name="message" component="div" />
           </div>
           <button type="submit" disabled={isSubmitting}>

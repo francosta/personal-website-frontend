@@ -1,0 +1,131 @@
+form {
+  min-width: 40vw;
+  text-align: right;
+
+  .name-form,
+  .email-form,
+  .message-form {
+    text-align: right;
+    margin-bottom: 1rem;
+
+    label {
+      font-size: 2rem;
+      line-height: 3rem;
+      margin: 0rem 1rem;
+      vertical-align: top;
+    }
+    input {
+      line-height: 3rem;
+      width: 70%;
+      min-width: 40rem;
+      padding: 0 1rem;
+      font-size: 1.5rem;
+      border-color: rgb(238, 238, 238);
+      border-width: 1px;
+    }
+
+    textarea {
+      min-height: 20rem;
+      line-height: 3rem;
+      min-width: 40rem;
+      width: 70%;
+      padding: 0 1rem;
+      font-size: 1.5rem;
+      border-color: rgb(238, 238, 238);
+      border-width: 1px;
+    }
+
+    div {
+      color: red;
+      font-size: 1.5rem;
+    }
+  }
+
+  button {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    line-height: 3rem;
+    min-width: 40rem;
+    width: 70%;
+  }
+}
+
+ErrorMessage {
+  color: red;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    padding-top: 5rem;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    align-self: center;
+  }
+
+  .message {
+    width: 100%;
+  }
+
+  form {
+    margin-top: 5rem;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+
+    .name-form,
+    .email-form,
+    .message-form {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      label {
+        margin-left: 0;
+        min-width: 0;
+      }
+      input {
+        min-width: 0;
+        width: 100%;
+      }
+      textarea {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+
+    button {
+      align-self: center;
+      width: 100%;
+      min-width: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  form > div {
+    font-size: 2rem;
+  }
+  form {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  padding-top: 10%;
+  p,
+  form > div {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  padding-top: 10%;
+  p,
+  form > div {
+    font-size: 1.7rem;
+  }
+}
