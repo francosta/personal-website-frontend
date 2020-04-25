@@ -23,19 +23,15 @@ const Contact = ({ path }) => {
       email: e.target.email.value,
       message: e.target.message.value,
     };
-    console.log(encode({ 'form-name': 'Contact Form', formData }));
+    console.log(encode({ 'form-name': 'Contact Form', ...formData }));
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'Contact Form', formData }),
+      body: encode({ 'form-name': 'contact', formData }),
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
-
-    // console.log(formData);
-
-    // const url = `https://formspree.io/${process.env.EMAIL_API}`;
 
     // try {
     //   const resp = await fetch(url, {
@@ -65,8 +61,13 @@ const Contact = ({ path }) => {
             Leave me a message and I’ll get back to you as soon as possible.
             Alternatively, you can also reach me at francisco@fcosta.pt
           </p>
-          <form onSubmit={handleSubmit}>
-            <input type="hidden" name="Contact Form" value="contact" />
+          <form
+            name="contact"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="contact" value="contact" />
             <input type="hidden" name="bot-field" />
             <div className={contactStyles.nameForm}>
               <label htmlFor="name">Name</label>
