@@ -46,12 +46,7 @@ const Contact = ({ path }) => {
             Leave me a message and I’ll get back to you as soon as possible.
             Alternatively, you can also reach me at francisco@fcosta.pt
           </p>
-          <form
-            method="post"
-            netlify-honeypot="bot-field"
-            data-netlify="true"
-            onSubmit={handleSubmit}
-          >
+          <form method="POST" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="bot-field" />
             <div className={contactStyles.nameForm}>
               <label htmlFor="name">Name</label>
