@@ -32,7 +32,7 @@ const Contact = ({ path }) => {
 
   return (
     <Layout path={path}>
-      <ContactForm />
+      {/* <ContactForm /> */}
       {messageSent ? (
         <div className={contactStyles.container}>
           <p>
