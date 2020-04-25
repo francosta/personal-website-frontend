@@ -26,7 +26,7 @@ const Contact = ({ path }) => {
     };
     console.log(encode({ 'form-name': 'contact', ...formData }));
 
-    const resp = await fetch('/contact', {
+    const resp = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...formData }),
