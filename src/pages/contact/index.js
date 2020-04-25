@@ -9,11 +9,20 @@ const Contact = ({ path }) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    // const formData = {
-    //   name: e.target.name.value,
-    //   email: e.target.email.value,
-    //   message: e.target.message.value,
-    // };
+    const formData = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData,
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error));
+
     // console.log(formData);
 
     // const url = `https://formspree.io/${process.env.EMAIL_API}`;
@@ -47,6 +56,7 @@ const Contact = ({ path }) => {
             Alternatively, you can also reach me at francisco@fcosta.pt
           </p>
           <form method="POST" data-netlify="true">
+            <input type="hidden" name="Contact Form" value="contact" />
             <input type="hidden" name="bot-field" />
             <div className={contactStyles.nameForm}>
               <label htmlFor="name">Name</label>
