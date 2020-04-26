@@ -6,7 +6,7 @@ import globalStyles from '../../styles/styles.module.scss';
 
 const Post = ({ post }) => {
   return (
-    <div className={postStyles.container}>
+    <div className={globalStyles.container}>
       <img
         className={globalStyles.hero}
         src={`${post.hero.image.url}`}

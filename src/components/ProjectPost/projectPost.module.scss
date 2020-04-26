@@ -1,20 +1,3 @@
-.container {
-  width: 60%;
-  margin: auto;
-  min-height: 80vh;
-  padding-top: 5rem;
-  animation: fadein 1s;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .titleContainer {
   display: flex;
   align-items: center;
@@ -44,25 +27,14 @@
   }
 }
 
-.description {
-  // font-style: italic;
-  font-weight: normal;
-  font-size: 2.2rem;
-  color: #616160;
-  margin: 0rem 0rem 2rem 0rem;
-}
-
-.hero {
-  object-fit: cover;
-  max-height: 35vh;
-  width: 100%;
-  margin-bottom: 5rem;
-}
-
 .summaryBox {
   display: flex;
   margin-top: 5rem;
   margin-bottom: 9rem;
+
+  img {
+    height: 2.75rem;
+  }
 
   .specs {
     padding-right: 2.8rem;
@@ -102,6 +74,10 @@
     }
   }
 
+  .heading {
+    font-size: 2.5rem;
+  }
+
   .summaryContainer {
     display: flex;
     align-self: flex-start;
@@ -110,17 +86,16 @@
     justify-content: space-around;
 
     img {
-      height: 2.4rem;
+      height: 2.75rem;
     }
 
     .summary {
       text-align: left;
       margin-left: 1.4rem;
-      font-size: 1.2rem;
 
       p {
-        padding-top: 1rem;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
         color: #525252;
       }
     }
@@ -206,13 +181,6 @@ blockquote:after {
   transition: 0.2s all ease-in-out, 0.4s transform ease-in-out;
 }
 
-// p {
-//   font-style: normal;
-//   font-weight: normal;
-//   font-size: 2rem;
-//   text-align: justify;
-// }
-
 pre {
   background: black;
   border-left: 3px solid #f36d33;
@@ -230,34 +198,6 @@ pre {
   code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     color: #666;
-  }
-}
-
-.body {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    font-size: 2.5rem;
-  }
-
-  h3 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1.7rem;
-    margin-top: 1rem;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 }
 
