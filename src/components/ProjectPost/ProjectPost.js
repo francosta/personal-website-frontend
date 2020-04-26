@@ -40,14 +40,14 @@ const Post = ({ post }) => {
         <div className={postStyles.specs}>
           <div className={postStyles.dateBox}>
             <div className={postStyles.date}>
-              <span className={postStyles.heading}>Date of Project</span>
-              <span>{post.publishedDate}</span>
+              <div className={postStyles.heading}>Date of Project</div>
+              <span className={postStyles.postDate}>{post.publishedDate}</span>
             </div>
             <img src={dateIcon} alt="Calendar icon in black and white" />
           </div>
           <div className={postStyles.stackBox}>
             <div className={postStyles.stack}>
-              <span className={postStyles.heading}>Stack</span>
+              <div className={postStyles.heading}>Stack</div>
               <ul>
                 {post.stack.technology.map(technology => (
                   <li>{technology.name}</li>
@@ -60,7 +60,7 @@ const Post = ({ post }) => {
         <div className={postStyles.summaryContainer}>
           <img src={summaryIcon} alt="Text icon in black and white" />
           <div className={postStyles.summary}>
-            <span className={postStyles.heading}>Summary</span>
+            <div className={postStyles.heading}>Summary</div>
             <p>{post.description}</p>
           </div>
         </div>
