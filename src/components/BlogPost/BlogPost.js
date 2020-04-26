@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import postStyles from './blogPost.module.scss';
+import PostDetails from '../PostDetails/PostDetails';
 import globalStyles from '../../styles/styles.module.scss';
 
 const Post = ({ post }) => {
