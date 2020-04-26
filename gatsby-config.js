@@ -17,6 +17,20 @@ module.exports = {
     `gatsby-plugin-sharp`,
     'gatsby-plugin-sass',
     {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [
+          `/about`,
+          `/contact`,
+          `/blog/*`,
+          `/blog`,
+          `/projects`,
+          `/`,
+          `/projects/*`,
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-strapi-v2`,
       options: {
         apiURL: process.env.API_URL,
