@@ -80,3 +80,25 @@ p {
     opacity: 1;
   }
 }
+
+// Mobile
+
+@media screen and (max-width: 850px) {
+  .container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 2rem;
+  }
+
+  .body {
+    p {
+      font-size: 1.7rem;
+    }
+  }
+}
