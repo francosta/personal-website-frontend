@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import Layout from '../../components/Layout/layout';
 import aboutStyles from './about.module.scss';
 import avatar from '../../images/avatar.jpg';
+import globalStyles from '../../styles/styles.module.scss';
 
 const About = ({ path }) => {
   const data = useStaticQuery(graphql`

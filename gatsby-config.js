@@ -46,13 +46,25 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
-        google: {
-          families: ['Poppins', 'sans serif'],
-        },
+        fonts: [
+          {
+            family: 'Poppins',
+            variable: true,
+            weights: ['200..900'],
+          },
+        ],
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: ['Poppins', 'sans serif'],
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-readingtime`,
       options: {

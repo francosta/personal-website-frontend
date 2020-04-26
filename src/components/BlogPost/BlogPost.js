@@ -1,37 +1,18 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import postStyles from './blogPost.module.scss';
+import globalStyles from '../../styles/styles.module.scss';
 
 const Post = ({ post }) => {
   return (
     <div className={postStyles.container}>
       <img
-        className={postStyles.hero}
+        className={globalStyles.hero}
         src={`${post.hero.image.url}`}
         alt={post.hero.altText}
       />
-      <h1 className={postStyles.title}>{post.title}</h1>
-      <h2 className={postStyles.description}>{post.description}</h2>
-      {/* <div className={postStyles.details}>
-        <Link to="/about">
-          <img
-            className={postStyles.avatar}
-            src={avatar}
-            alt="Francisco Costa"
-          />
-        </Link>
-        <div className={postStyles.detailsBox}>
-          <Link to="/about">
-            <span className={postStyles.author}>Francisco Costa</span>
-          </Link>
-          <div className={postStyles.articleDetails}>
-            <span className={postStyles.publishedDate}>
-              {post.publishedDate}
-            </span>
-            <span>{Math.round(post.readingTime.minutes)}min read</span>
-          </div>
-        </div>
-      </div> */}
+      <h1>{post.title}</h1>
+      <p className={postStyles.description}>{post.description}</p>
       <ReactMarkdown className={postStyles.body} source={post.body} />
     </div>
   );

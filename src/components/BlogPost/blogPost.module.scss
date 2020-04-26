@@ -15,26 +15,12 @@
   }
 }
 
-.title {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 3rem;
-  margin: 0rem 0rem 2.5rem 0rem;
-}
-
 .description {
-  // font-style: italic;
-  font-weight: normal;
+  font-weight: lighter;
   font-size: 2.2rem;
+  line-height: 3.3rem;
   color: #616160;
   margin: 0rem 0rem 2rem 0rem;
-}
-
-.hero {
-  object-fit: cover;
-  max-height: 35vh;
-  width: 100%;
-  margin-bottom: 3rem;
 }
 
 .details {
@@ -112,13 +98,6 @@ blockquote:after {
   transition: 0.2s all ease-in-out, 0.4s transform ease-in-out;
 }
 
-p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 2rem;
-  text-align: justify;
-}
-
 pre {
   background: black;
   border-left: 3px solid #f36d33;
@@ -136,35 +115,6 @@ pre {
   code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     color: #666;
-  }
-}
-
-.body {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    font-size: 2.5rem;
-  }
-
-  h3 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1.7rem;
-    margin-top: 1rem;
-
-    img {
-      width: 80%;
-      height: auto;
-      margin: 5% 10%;
-    }
   }
 }
 
