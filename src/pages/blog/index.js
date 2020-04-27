@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/Layout/layout';
 import blogStyles from './blog.module.scss';
 import CardGrid from '../../components/CardGrid/CardGrid';
+import SEO from '../../components/seo';
 
 const Blog = ({ path }) => {
   const data = useStaticQuery(graphql`
@@ -35,6 +36,7 @@ const Blog = ({ path }) => {
 
   return (
     <Layout path={path}>
+      <SEO title="Blog" />
       <section className={blogStyles.container}>
         <CardGrid path={path} posts={posts} />
       </section>
