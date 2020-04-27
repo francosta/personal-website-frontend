@@ -1,0 +1,28 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-right: 1.5rem;
+  }
+
+  .networksContainer {
+    display: flex;
+  }
+
+  .networksContainer {
+    a {
+      align-self: center;
+    }
+
+    img {
+      max-height: 3rem;
+      margin-right: 1rem;
+      display: block;
+    }
+  }
+}

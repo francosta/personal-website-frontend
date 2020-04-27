@@ -5,9 +5,8 @@ import postStyles from './projectPost.module.scss';
 import globalStyles from '../../styles/styles.module.scss';
 
 // Images import
-import Github from '../../images/logos/github.jpg';
-import Youtube from '../../images/logos/youtube.jpg';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
+import ProjectTitle from '../ProjectTitle/ProjectTitle';
 
 const Post = ({ post }) => {
   return (
@@ -18,21 +17,7 @@ const Post = ({ post }) => {
           src={`${post.hero.image.url}`}
           alt={post.hero.altText}
         />
-        <div className={postStyles.titleContainer}>
-          <h1 className={postStyles.title}>{post.title}</h1>
-          <div className={postStyles.networksContainer}>
-            {post.networks.map((network, index) => {
-              return (
-                <a index={index} href={network.link} target="blank">
-                  <img
-                    src={network.network === 'Github' ? Github : Youtube}
-                    alt="Network logo"
-                  />
-                </a>
-              );
-            })}
-          </div>
-        </div>
+        <ProjectTitle post={post} />
       </section>
       <ProjectDetails post={post} />
       <section>
