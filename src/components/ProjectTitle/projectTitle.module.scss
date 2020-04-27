@@ -1,0 +1,75 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-right: 1.5rem;
+  }
+
+  .networksContainer {
+    display: flex;
+  }
+
+  .networksContainer {
+    a {
+      align-self: center;
+    }
+
+    img {
+      max-height: 3rem;
+      margin-right: 1rem;
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projectHeader {
+    img {
+      margin-bottom: 2rem;
+      display: block;
+    }
+  }
+
+  .titleContainer {
+    margin-bottom: 0.5rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .title {
+      margin-right: 0;
+    }
+
+    .networksContainer {
+      display: flex;
+    }
+
+    .networksContainer {
+      a {
+        align-self: center;
+      }
+
+      img {
+        max-height: 2rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        display: block;
+      }
+    }
+  }
+
+  .body {
+    p {
+      font-size: 1.7rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

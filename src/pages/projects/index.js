@@ -1,8 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../../components/Layout/layout';
-import blogStyles from './blog.module.scss';
+import projectStyles from './projects.module.scss';
 import CardGrid from '../../components/CardGrid/CardGrid';
+import SEO from '../../components/seo';
 
 const Blog = ({ path }) => {
   const data = useStaticQuery(graphql`
@@ -44,7 +45,8 @@ const Blog = ({ path }) => {
 
   return (
     <Layout path={path}>
-      <section className={blogStyles.container}>
+      <SEO title="Projects" />
+      <section className={projectStyles.container}>
         <CardGrid path={path} posts={posts} />
       </section>
     </Layout>

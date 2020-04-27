@@ -77,7 +77,6 @@ const IndexPage = ({ path }) => {
                 source={landingText}
                 linkTarget="blank"
               />
-              {/* {landingText} */}
             </p>
             <span className={indexStyles.blinkingCursor}>|</span>
           </div>

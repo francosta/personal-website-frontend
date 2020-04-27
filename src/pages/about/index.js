@@ -5,6 +5,7 @@ import Layout from '../../components/Layout/layout';
 import aboutStyles from './about.module.scss';
 import avatar from '../../images/avatar.jpg';
 import globalStyles from '../../styles/styles.module.scss';
+import SEO from '../../components/seo';
 
 const About = ({ path }) => {
   const data = useStaticQuery(graphql`
@@ -19,6 +20,7 @@ const About = ({ path }) => {
 
   return (
     <Layout path={path}>
+      <SEO title="About" />
       <div className={aboutStyles.container}>
         <div className={aboutStyles.profilePicture}>
           <img
