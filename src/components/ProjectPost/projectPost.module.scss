@@ -64,10 +64,6 @@ pre {
 }
 
 @media screen and (max-width: 900px) {
-  .container {
-    width: 100%;
-  }
-
   .projectHeader {
     img {
       margin-bottom: 2rem;
@@ -97,57 +93,6 @@ pre {
           margin-right: 0.5rem;
           margin-left: 0.5rem;
           display: block;
-        }
-      }
-    }
-  }
-
-  .summaryBox {
-    flex-direction: column;
-    margin-top: 0;
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-
-    .specs,
-    .summaryContainer {
-      padding: 0;
-      border-right: none;
-      align-self: flex-start;
-
-      img {
-        display: none;
-      }
-
-      .dateBox,
-      .stackBox {
-        display: flex;
-        margin: 0.5rem 0;
-        align-self: flex-start;
-
-        .date {
-          text-align: unset;
-          margin: 0;
-        }
-
-        .stack {
-          text-align: unset;
-          margin: 0;
-        }
-
-        h2 {
-          margin-right: 2rem;
-        }
-
-        ul {
-          list-style: none;
-        }
-      }
-
-      .summary {
-        margin: 0.5rem 0;
-        p {
-          font-size: 1.2rem;
-          padding: 0;
         }
       }
     }

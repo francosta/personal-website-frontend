@@ -83,6 +83,17 @@ p {
 
 // Mobile
 
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .container {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .container {
     width: 100%;
