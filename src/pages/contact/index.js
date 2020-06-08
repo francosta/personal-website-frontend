@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Layout from '../../components/Layout/layout';
 import contactStyles from './contact.module.scss';
 import ContactForm from '../../components/ContactForm/ContactForm';
+import SEO from '../../components/seo';
 
 const Contact = ({ path }) => {
   const [messageSent, setMessageSent] = useState(false);
@@ -9,6 +10,7 @@ const Contact = ({ path }) => {
 
   return (
     <Layout path={path}>
+      <SEO title="Contact" />
       {messageSent ? (
         <div className={contactStyles.container}>
           <p>
