@@ -56,9 +56,15 @@ h6 {
   p {
     font-size: 2.5rem;
   }
+  p:last-child:after {
+    animation: blink 1s step-end infinite;
+    font-size: 2.5rem;
+    margin-left: 0.2rem;
+    content: '|';
+  }
 }
 
-.goToPosts {
+.introText .goToPosts {
   position: absolute;
   top: 80%;
   left: 50%;
