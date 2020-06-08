@@ -70,22 +70,11 @@ const IndexPage = ({ path }) => {
       <section id="landing">
         <div className={indexStyles.landing}>
           <div className={indexStyles.introduction}>
-<<<<<<< HEAD
             <ReactMarkdown
               className={indexStyles.text}
               source={landingText}
               linkTarget="blank"
             />
-=======
-            <p>
-              <ReactMarkdown
-                className={indexStyles.text}
-                source={landingText}
-                linkTarget="blank"
-              />
-            </p>
-            <span className={indexStyles.blinkingCursor}>|</span>
->>>>>>> 81a0da090d2bb51a1f4bdb9b37af2f14eb952924
           </div>
           <a href="#posts" className={indexStyles.goToPosts}>
             <svg
