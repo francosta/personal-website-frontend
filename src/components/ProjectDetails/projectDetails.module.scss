@@ -11,77 +11,86 @@
     padding-right: 2.8rem;
     padding-left: 5rem;
     border-right: 1px solid #000000;
+    flex: 1;
 
     .dateBox {
-      display: flex;
-      align-items: flex-start;
-      align-self: flex-end;
+      text-align: right;
+      margin-right: 1.4rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.2rem;
 
-      .date {
-        text-align: right;
+      .heading {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        span {
+          margin-right: 1.4rem;
+        }
+      }
+
+      .postDate {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: #525252;
+      }
+    }
+
+    .stackBox {
+      text-align: right;
+      margin-right: 1.4rem;
+      font-size: 1.2rem;
+
+      .heading {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        span {
+          margin-right: 1.4rem;
+        }
+      }
+
+      ul {
+        list-style: none;
         white-space: nowrap;
-        margin-right: 1.4rem;
-        margin-bottom: 1.2rem;
-        font-size: 1.2rem;
+        margin-top: 1rem;
 
-        .postDate {
-          margin-top: 1rem;
-          font-size: 1.5rem;
+        li {
+          font-size: 1.3rem;
           line-height: 1.8rem;
           color: #525252;
         }
       }
     }
-
-    .stackBox {
-      display: flex;
-      align-items: flex-start;
-      align-self: flex-end;
-
-      .stack {
-        text-align: right;
-        margin-right: 1.4rem;
-        font-size: 1.2rem;
-
-        ul {
-          list-style: none;
-          white-space: nowrap;
-          margin-top: 1rem;
-
-          li {
-            font-size: 1.3rem;
-            line-height: 1.8rem;
-            color: #525252;
-          }
-        }
-      }
+    .heading {
+      font-size: 2rem;
     }
-  }
-
-  .heading {
-    font-size: 2.5rem;
   }
 
   .summaryContainer {
     display: flex;
+    flex-direction: column;
     align-self: flex-start;
     padding-left: 2.8rem;
     padding-right: 5rem;
     justify-content: space-around;
+    flex: 2;
+
+    .heading {
+      align-items: center;
+      display: flex;
+      font-size: 2rem;
+    }
 
     img {
       height: 2.75rem;
+      margin-right: 1.4rem;
     }
 
-    .summary {
-      text-align: left;
-      margin-left: 1.4rem;
-
-      p {
-        font-size: 1.5rem;
-        line-height: 2.25rem;
-        color: #525252;
-      }
+    p {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      color: #525252;
     }
   }
 }
@@ -95,8 +104,12 @@
   .summaryBox {
     flex-direction: column;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0.1rem;
     font-size: 1.2rem;
+
+    .heading {
+      font-size: 1.7rem;
+    }
 
     .specs,
     .summaryContainer {
@@ -113,15 +126,12 @@
         display: flex;
         margin: 0.5rem 0;
         align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
 
-        .date {
-          text-align: unset;
-          margin: 0;
-        }
-
-        .stack {
-          text-align: unset;
-          margin: 0;
+        .heading {
+          justify-content: flex-start;
         }
 
         h2 {
@@ -139,6 +149,12 @@
           font-size: 1.2rem;
           padding: 0;
         }
+      }
+    }
+    .summaryContainer {
+      margin-top: 1rem;
+      p {
+        font-size: 1.6rem;
       }
     }
   }

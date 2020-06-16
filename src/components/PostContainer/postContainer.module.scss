@@ -6,6 +6,15 @@
   animation: fadein 1s;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .container {
     width: 75%;

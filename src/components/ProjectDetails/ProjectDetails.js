@@ -11,36 +11,34 @@ const ProjectDetails = ({ post }) => {
     <section className={postStyles.summaryBox}>
       <div className={postStyles.specs}>
         <div className={postStyles.dateBox}>
-          <div className={postStyles.date}>
-            <div className={postStyles.heading}>
-              <span>Date of Project</span>
-            </div>
-            <div className={postStyles.postDate}>
-              <span>{post.publishedDate}</span>
-            </div>
+          <div className={postStyles.heading}>
+            <span>Date of Project</span>
+            <img src={dateIcon} alt="Calendar icon in black and white" />
           </div>
-          <img src={dateIcon} alt="Calendar icon in black and white" />
+          <div className={postStyles.postDate}>
+            <span>{post.publishedDate}</span>
+          </div>
         </div>
         <div className={postStyles.stackBox}>
-          <div className={postStyles.stack}>
-            <div className={postStyles.heading}>Stack</div>
+          <div className={postStyles.heading}>
+            <span>Stack</span>
+            <img src={stackIcon} alt="Programming icon in black and white" />
+          </div>
+          <div className={postStyles.postStack}>
             <ul>
               {post.stack.technology.map((technology) => (
                 <li>{technology.name}</li>
               ))}
             </ul>
           </div>
-          <img src={stackIcon} alt="Programming icon in black and white" />
         </div>
       </div>
       <div className={postStyles.summaryContainer}>
-        <img src={summaryIcon} alt="Text icon in black and white" />
-        <div className={postStyles.summary}>
-          <div className={postStyles.heading}>
-            <span>Summary</span>
-          </div>
-          <p>{post.description}</p>
+        <div className={postStyles.heading}>
+          <img src={summaryIcon} alt="Text icon in black and white" />
+          <span>Summary</span>
         </div>
+        <p>{post.description}</p>
       </div>
     </section>
   );
