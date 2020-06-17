@@ -78,6 +78,7 @@ const IndexPage = ({ path }) => {
           </div>
           <a href="#posts" className={indexStyles.goToPosts}>
             <svg
+              className={indexStyles.goToPostsImage}
               width="121"
               height="91"
               viewBox="0 0 121 91"

@@ -81,7 +81,7 @@ h6 {
 
 @media screen and (max-width: 1800px) {
   .posts {
-    padding-top: 15rem;
+    padding-top: 10rem;
   }
 }
 
@@ -94,6 +94,10 @@ h6 {
       font-size: 2.2rem;
     }
   }
+
+  .goToPostsImage {
+    width: 75px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -104,6 +108,9 @@ h6 {
       font-size: 2rem;
     }
   }
+  .goToPostsImage {
+    width: 70px;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -113,5 +120,8 @@ h6 {
     p {
       font-size: 1.7rem;
     }
+  }
+  .goToPostsImage {
+    width: 50px;
   }
 }
