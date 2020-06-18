@@ -8,7 +8,7 @@ import SEO from '../../components/seo';
 const Blog = ({ path }) => {
   const data = useStaticQuery(graphql`
     query {
-      allStrapiProject {
+      allStrapiProject(sort: { order: DESC, fields: publishedDate }) {
         nodes {
           hero {
             image {
