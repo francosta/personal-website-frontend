@@ -10,7 +10,7 @@ import CardGrid from '../components/CardGrid/CardGrid';
 const IndexPage = ({ path }) => {
   const data = useStaticQuery(graphql`
     query {
-      allStrapiBlogPost {
+      allStrapiBlogPost(sort: { order: DESC, fields: publishedDate }) {
         nodes {
           hero {
             image {
@@ -19,7 +19,7 @@ const IndexPage = ({ path }) => {
             altText
           }
           title
-          publishedDate(formatString: "DD MMMM YYYY")
+          publishedDate
           description
           body
           fields {
@@ -31,7 +31,7 @@ const IndexPage = ({ path }) => {
           }
         }
       }
-      allStrapiProject {
+      allStrapiProject(sort: { order: DESC, fields: publishedDate }) {
         nodes {
           hero {
             image {
@@ -40,7 +40,7 @@ const IndexPage = ({ path }) => {
             altText
           }
           title
-          publishedDate(formatString: "DD MMMM YYYY")
+          publishedDate
           description
           body
           readingTime {
@@ -61,6 +61,10 @@ const IndexPage = ({ path }) => {
   const posts = data.allStrapiBlogPost.nodes.concat(
     data.allStrapiProject.nodes
   );
+
+  const sortedPosts = posts.sort((a, b) => {
+    return new Date(b.publishedDate) - new Date(a.publishedDate);
+  });
 
   const { landingText } = data.strapiLandingPage;
 
@@ -108,7 +112,7 @@ const IndexPage = ({ path }) => {
         </div>
       </section>
       <section id="posts" className={indexStyles.posts}>
-        <CardGrid path={path} posts={posts} />
+        <CardGrid path={path} posts={sortedPosts} />
       </section>
     </Layout>
   );
