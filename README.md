@@ -11,7 +11,7 @@ There are two types of posts - Blog Posts and Projects. All are indexed at initi
 # APIs
 
 The CMS backend was built using Strapi and uses its GraphQL API.
-The contact page uses (Getform)[https://getform.io/] to manage form submissions.
+The contact page uses [Getform](https://getform.io/) to manage form submissions.
 
 # Styling
 
