@@ -49,7 +49,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //   //   // This will get a slug for each of the existing nodes.
   const resp = await graphql(`
     query {
-      allStrapiBlogPost {
+      allStrapiBlogPost(sort: { order: DESC, fields: publishedDate }) {
         nodes {
           hero {
             image {
@@ -70,7 +70,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allStrapiProject {
+      allStrapiProject(sort: { order: DESC, fields: publishedDate }) {
         nodes {
           hero {
             image {
