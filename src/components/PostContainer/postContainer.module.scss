@@ -4,6 +4,16 @@
   min-height: 80vh;
   padding-top: 5rem;
   animation: fadein 1s;
+
+  ul {
+    li {
+      font-size: 2rem;
+      font-weight: lighter;
+      line-height: 3rem;
+      margin-top: 1rem;
+      margin-left: 4rem;
+    }
+  }
 }
 
 @keyframes fadein {
