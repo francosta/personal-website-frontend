@@ -11,38 +11,36 @@ body {
 }
 
 // Typography
-main {
-  h1 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3rem;
-    margin: 0rem 0rem 2.5rem 0rem;
-  }
+h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0rem 0rem 2.5rem 0rem;
+}
 
-  h2 {
-    font-size: 2.5rem;
-    line-height: 3;
-    margin: 2rem 0rem 0rem 0rem;
-  }
+h2 {
+  font-size: 2.5rem;
+  line-height: 3;
+  margin: 2rem 0rem 0rem 0rem;
+}
 
-  h3 {
-    font-size: 2rem;
-    line-height: 2;
-    margin: 2.3rem 0rem -0.5rem 0rem;
-  }
+h3 {
+  font-size: 2rem;
+  line-height: 2;
+  margin: 2.3rem 0rem -0.5rem 0rem;
+}
 
-  p {
-    font-size: 2rem;
-    font-weight: lighter;
-    line-height: 3rem;
-    margin-top: 1rem;
-    text-align: justify;
+p {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 3rem;
+  margin-top: 1rem;
+  text-align: justify;
 
-    img {
-      width: 80%;
-      height: auto;
-      margin: 5% 10%;
-    }
+  img {
+    width: 80%;
+    height: auto;
+    margin: 5% 10%;
   }
 }
 
