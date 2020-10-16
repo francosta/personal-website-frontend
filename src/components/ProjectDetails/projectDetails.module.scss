@@ -45,6 +45,7 @@
         align-items: center;
         display: flex;
         justify-content: flex-end;
+        margin-top: 1rem;
         span {
           margin-right: 1.4rem;
         }
@@ -53,12 +54,14 @@
       ul {
         list-style: none;
         white-space: nowrap;
-        margin-top: 1rem;
+        // margin-top: 1rem;
 
         li {
           font-size: 1.3rem;
           line-height: 1.8rem;
           color: #525252;
+          margin-top: 0rem;
+          margin-left: 0rem;
         }
       }
     }
