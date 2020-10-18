@@ -76,7 +76,8 @@
   font-size: 1.5rem;
 }
 
-.details {
+.details,
+.titleContainer > .details {
   padding-top: 2.5rem;
 
   ul {
