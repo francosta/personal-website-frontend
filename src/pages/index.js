@@ -1,10 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
 import ReactMarkdown from 'react-markdown';
+import indexStyles from './index.module.scss';
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
-import indexStyles from './index.module.scss';
 import CardGrid from '../components/CardGrid/CardGrid';
 
 const IndexPage = ({ path }) => {
