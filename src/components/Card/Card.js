@@ -23,18 +23,18 @@ const Card = ({ index, post, path }) => {
             alt={post.hero.altText}
           />
           <div className={cardStyles.titleContainer}>
-            <Link
-              to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
-            >
-              {path === '/' ? (
+            {path === '/' ? (
+              <Link
+                to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
+              >
                 <div className={cardStyles.postType}>
                   <span>
                     {post.fields.type.charAt(0).toUpperCase() +
                       post.fields.type.slice(1)}
                   </span>
                 </div>
-              ) : null}
-            </Link>
+              </Link>
+            ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
           </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -63,18 +63,18 @@ const Card = ({ index, post, path }) => {
             alt={post.hero.altText}
           />
           <div className={cardStyles.titleContainer}>
-            <Link
-              to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
-            >
-              {path === '/' ? (
+            {path === '/' ? (
+              <Link
+                to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
+              >
                 <div className={cardStyles.postType}>
                   <span>
                     {post.fields.type.charAt(0).toUpperCase() +
                       post.fields.type.slice(1)}
                   </span>
                 </div>
-              ) : null}
-            </Link>
+              </Link>
+            ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
           </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -103,18 +103,18 @@ const Card = ({ index, post, path }) => {
             alt={post.hero.altText}
           />
           <div className={cardStyles.titleContainer}>
-            <Link
-              to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
-            >
-              {path === '/' ? (
+            {path === '/' ? (
+              <Link
+                to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
+              >
                 <div className={cardStyles.postType}>
                   <span>
                     {post.fields.type.charAt(0).toUpperCase() +
                       post.fields.type.slice(1)}
                   </span>
                 </div>
-              ) : null}
-            </Link>
+              </Link>
+            ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
           </div>
           <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
@@ -142,16 +142,18 @@ const Card = ({ index, post, path }) => {
           alt={post.hero.altText}
         />
         <div className={cardStyles.titleContainer}>
-          <Link to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}>
-            {path === '/' ? (
+          {path === '/' ? (
+            <Link
+              to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
+            >
               <div className={cardStyles.postType}>
                 <span>
                   {post.fields.type.charAt(0).toUpperCase() +
                     post.fields.type.slice(1)}
                 </span>
               </div>
-            ) : null}
-          </Link>
+            </Link>
+          ) : null}
           <h1 className={cardStyles.postTitle}>{post.title}</h1>
         </div>
         <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
