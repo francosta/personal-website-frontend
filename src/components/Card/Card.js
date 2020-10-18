@@ -25,8 +25,16 @@ const Card = ({ index, post, path }) => {
           <div className={cardStyles.titleContainer}>
             {path === '/' ? (
               <div className={cardStyles.postType}>
-                {post.fields.type.charAt(0).toUpperCase() +
-                  post.fields.type.slice(1)}
+                <span>
+                  <Link
+                    to={`/${
+                      post.fields.type === 'project' ? 'projects' : 'blog'
+                    }`}
+                  >
+                    {post.fields.type.charAt(0).toUpperCase() +
+                      post.fields.type.slice(1)}
+                  </Link>
+                </span>
               </div>
             ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
@@ -59,8 +67,16 @@ const Card = ({ index, post, path }) => {
           <div className={cardStyles.titleContainer}>
             {path === '/' ? (
               <div className={cardStyles.postType}>
-                {post.fields.type.charAt(0).toUpperCase() +
-                  post.fields.type.slice(1)}
+                <span>
+                  <Link
+                    to={`/${
+                      post.fields.type === 'project' ? 'projects' : 'blog'
+                    }`}
+                  >
+                    {post.fields.type.charAt(0).toUpperCase() +
+                      post.fields.type.slice(1)}
+                  </Link>
+                </span>
               </div>
             ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
@@ -93,8 +109,16 @@ const Card = ({ index, post, path }) => {
           <div className={cardStyles.titleContainer}>
             {path === '/' ? (
               <div className={cardStyles.postType}>
-                {post.fields.type.charAt(0).toUpperCase() +
-                  post.fields.type.slice(1)}
+                <span>
+                  <Link
+                    to={`/${
+                      post.fields.type === 'project' ? 'projects' : 'blog'
+                    }`}
+                  >
+                    {post.fields.type.charAt(0).toUpperCase() +
+                      post.fields.type.slice(1)}
+                  </Link>
+                </span>
               </div>
             ) : null}
             <h1 className={cardStyles.postTitle}>{post.title}</h1>
@@ -126,8 +150,16 @@ const Card = ({ index, post, path }) => {
         <div className={cardStyles.titleContainer}>
           {path === '/' ? (
             <div className={cardStyles.postType}>
-              {post.fields.type.charAt(0).toUpperCase() +
-                post.fields.type.slice(1)}
+              <span>
+                <Link
+                  to={`/${
+                    post.fields.type === 'project' ? 'projects' : 'blog'
+                  }`}
+                >
+                  {post.fields.type.charAt(0).toUpperCase() +
+                    post.fields.type.slice(1)}
+                </Link>
+              </span>
             </div>
           ) : null}
           <h1 className={cardStyles.postTitle}>{post.title}</h1>
