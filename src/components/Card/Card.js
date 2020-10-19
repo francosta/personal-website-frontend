@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
 import cardStyles from './card.module.scss';
+import CardImage from '../CardImage/CardImage';
+import CardHeading from '../CardHeading/CardHeading';
+import CardDetails from '../CardDetails/CardDetails';
+import CardDescription from '../CardDescription/CardDescription';
 
 const Card = ({ index, post, path }) => {
-  const structure = [1, 2, 3, 4]; // should be an enum?
+  const structure = [1, 2, 3, 4];
   const ind = index % structure.length;
   const selector = structure[ind];
 
@@ -17,34 +20,11 @@ const Card = ({ index, post, path }) => {
     return (
       <div className={`${cardStyles.card} ${cardStyles.card1Left}`}>
         <Link to={`/${post.fields.type}/${post.fields.slug}`}>
-          <img
-            className={cardStyles.image}
-            src={`${post.hero.image.url}`}
-            alt={post.hero.altText}
-          />
-          <div className={cardStyles.titleContainer}>
-            {path === '/' ? (
-              <Link
-                to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
-              >
-                <div className={cardStyles.postType}>
-                  <span>
-                    {post.fields.type.charAt(0).toUpperCase() +
-                      post.fields.type.slice(1)}
-                  </span>
-                </div>
-              </Link>
-            ) : null}
-            <h1 className={cardStyles.postTitle}>{post.title}</h1>
-          </div>
-          <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
+          <CardImage image={post.hero} />
+          <CardHeading path={path} post={post} />
+          <CardDescription descriptionExcerpt={descriptionExcerpt} />
         </Link>
-        <div className={cardStyles.details}>
-          <ul>
-            <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-            <li>{Math.round(post.readingTime.minutes)} mins read</li>
-          </ul>
-        </div>
+        <CardDetails post={post} />
       </div>
     );
   }
@@ -57,34 +37,11 @@ const Card = ({ index, post, path }) => {
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2Right}`}>
         <Link to={`/${post.fields.type}/${post.fields.slug}`}>
-          <img
-            className={cardStyles.image}
-            src={`${post.hero.image.url}`}
-            alt={post.hero.altText}
-          />
-          <div className={cardStyles.titleContainer}>
-            {path === '/' ? (
-              <Link
-                to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
-              >
-                <div className={cardStyles.postType}>
-                  <span>
-                    {post.fields.type.charAt(0).toUpperCase() +
-                      post.fields.type.slice(1)}
-                  </span>
-                </div>
-              </Link>
-            ) : null}
-            <h1 className={cardStyles.postTitle}>{post.title}</h1>
-          </div>
-          <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
+          <CardImage image={post.hero} />
+          <CardHeading path={path} post={post} />
+          <CardDescription descriptionExcerpt={descriptionExcerpt} />{' '}
         </Link>
-        <div className={cardStyles.details}>
-          <ul>
-            <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-            <li>{Math.round(post.readingTime.minutes)} mins read</li>
-          </ul>
-        </div>
+        <CardDetails post={post} />
       </div>
     );
   }
@@ -97,37 +54,15 @@ const Card = ({ index, post, path }) => {
     return (
       <div className={`${cardStyles.card} ${cardStyles.card2Left}`}>
         <Link to={`/${post.fields.type}/${post.fields.slug}`}>
-          <img
-            className={cardStyles.image}
-            src={`${post.hero.image.url}`}
-            alt={post.hero.altText}
-          />
-          <div className={cardStyles.titleContainer}>
-            {path === '/' ? (
-              <Link
-                to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
-              >
-                <div className={cardStyles.postType}>
-                  <span>
-                    {post.fields.type.charAt(0).toUpperCase() +
-                      post.fields.type.slice(1)}
-                  </span>
-                </div>
-              </Link>
-            ) : null}
-            <h1 className={cardStyles.postTitle}>{post.title}</h1>
-          </div>
-          <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
+          <CardImage image={post.hero} />
+          <CardHeading path={path} post={post} />
+          <CardDescription descriptionExcerpt={descriptionExcerpt} />{' '}
         </Link>
-        <div className={cardStyles.details}>
-          <ul>
-            <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-            <li>{Math.round(post.readingTime.minutes)} mins read</li>
-          </ul>
-        </div>
+        <CardDetails post={post} />
       </div>
     );
   }
+
   let descriptionExcerpt = post.description;
   if (post.description.length > 230) {
     descriptionExcerpt = `${post.description.substring(0, 227)}...`;
@@ -136,34 +71,11 @@ const Card = ({ index, post, path }) => {
   return (
     <div className={`${cardStyles.card} ${cardStyles.card1Right}`}>
       <Link to={`/${post.fields.type}/${post.fields.slug}`}>
-        <img
-          className={cardStyles.image}
-          src={`${post.hero.image.url}`}
-          alt={post.hero.altText}
-        />
-        <div className={cardStyles.titleContainer}>
-          {path === '/' ? (
-            <Link
-              to={`/${post.fields.type === 'project' ? 'projects' : 'blog'}`}
-            >
-              <div className={cardStyles.postType}>
-                <span>
-                  {post.fields.type.charAt(0).toUpperCase() +
-                    post.fields.type.slice(1)}
-                </span>
-              </div>
-            </Link>
-          ) : null}
-          <h1 className={cardStyles.postTitle}>{post.title}</h1>
-        </div>
-        <h6 className={cardStyles.description}>{descriptionExcerpt}</h6>
+        <CardImage image={post.hero} />
+        <CardHeading path={path} post={post} />
+        <CardDescription descriptionExcerpt={descriptionExcerpt} />{' '}
       </Link>
-      <div className={cardStyles.details}>
-        <ul>
-          <li className={cardStyles.publishedDate}>{post.publishedDate}</li>
-          <li>{Math.round(post.readingTime.minutes)} mins read</li>
-        </ul>
-      </div>
+      <CardDetails post={post} />
     </div>
   );
 };
