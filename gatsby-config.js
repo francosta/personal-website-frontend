@@ -57,14 +57,6 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader',
-    //   options: {
-    //     google: {
-    //       families: ['Poppins', 'sans serif'],
-    //     },
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-readingtime`,
       options: {
@@ -85,13 +77,22 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-remark-images`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        // It's important to specify the maxWidth (in pixels) of
-        // the content container as this plugin uses this as the
-        // base for generating different widths of each image.
-        maxWidth: 650,
-        loading: 'lazy',
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 650,
+              loading: 'lazy',
+              showCaptions: true,
+              markdownCaptions: true,
+            },
+          },
+        ],
       },
     },
     {
