@@ -6,6 +6,7 @@ import PostContainer from '../components/PostContainer/PostContainer';
 import PostHero from '../components/PostHero/PostHero';
 import ProjectTitle from '../components/ProjectTitle/ProjectTitle';
 import ProjectDetails from '../components/ProjectDetails/ProjectDetails';
+import CodeBlock from '../components/CodeBlock/CodeBlock';
 
 const ProjectPost = ({ pageContext, path }) => {
   const { post } = pageContext;
@@ -20,7 +21,7 @@ const ProjectPost = ({ pageContext, path }) => {
           <ProjectDetails post={post} />
         </section>
         <section id="ProjectBody">
-          <ReactMarkdown source={post.body} />
+          <ReactMarkdown source={post.body} renderers={{ code: CodeBlock }} />
         </section>
       </PostContainer>
     </Layout>
