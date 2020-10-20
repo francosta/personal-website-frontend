@@ -5,6 +5,7 @@ import Layout from '../components/Layout/layout';
 import PostContainer from '../components/PostContainer/PostContainer';
 import PostHero from '../components/PostHero/PostHero';
 import BlogPostHeader from '../components/BlogPostHeader/BlogPostHeader';
+import CodeBlock from '../components/CodeBlock/CodeBlock';
 
 const BlogPost = ({ pageContext, path }) => {
   const { post } = pageContext;
@@ -18,7 +19,7 @@ const BlogPost = ({ pageContext, path }) => {
           <BlogPostHeader post={post} />
         </section>
         <section id="BlogPost">
-          <ReactMarkdown source={post.body} />
+          <ReactMarkdown source={post.body} renderers={{ code: CodeBlock }} />
         </section>
       </PostContainer>
     </Layout>
