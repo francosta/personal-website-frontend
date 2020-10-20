@@ -31,6 +31,10 @@ h6 {
   animation: fadein 1s;
 }
 
+pre {
+  margin-top: 10rem;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
