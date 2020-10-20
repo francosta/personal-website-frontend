@@ -18,7 +18,7 @@ const BlogPost = ({ pageContext, path }) => {
           <PostHero heroImage={post.hero} />
           <BlogPostHeader post={post} />
         </section>
-        <section id="blogPost">
+        <section id="BlogPost">
           <ReactMarkdown source={post.body} renderers={{ code: CodeBlock }} />
         </section>
       </PostContainer>
