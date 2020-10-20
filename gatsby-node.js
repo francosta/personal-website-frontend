@@ -43,8 +43,8 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const blogTemplate = path.resolve('./src/templates/BlogPost.js');
-  const projectTemplate = path.resolve('./src/templates/ProjectPost.js');
+  const blogTemplate = path.resolve('./src/templates/blogPost.js');
+  const projectTemplate = path.resolve('./src/templates/projectPost.js');
 
   //   //   // This will get a slug for each of the existing nodes.
   const resp = await graphql(`
@@ -104,7 +104,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   `);
 
   // Create pages for blog posts, from blog post template.
-  resp.data.allStrapiBlogPost.nodes.forEach((post) => {
+  resp.data.allStrapiBlogPost.nodes.forEach(post => {
     createPage({
       component: blogTemplate,
       path: `/blog/${post.fields.slug}`,
@@ -116,7 +116,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   });
 
   // Create pages for project posts, from project post template.
-  resp.data.allStrapiProject.nodes.forEach((post) => {
+  resp.data.allStrapiProject.nodes.forEach(post => {
     createPage({
       component: projectTemplate,
       path: `/project/${post.fields.slug}`,
