@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 class CodeBlock extends PureComponent {
   static propTypes = {
