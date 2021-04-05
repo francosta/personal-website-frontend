@@ -52,6 +52,17 @@ const Navbar = ({ path }) => {
           <li
           // className={
           //   path !== '/' &&
+          //   path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'projects'
+          //     ? `${navbarStyles.active}`
+          //     : null
+          // }
+          >
+            <Link>
+            <a href="https://francisco-costa-personal-website.s3-eu-west-1.amazonaws.com/Francisco_Costa_CV.pdf" target="_blank">CV</a></Link>
+          </li>
+          <li
+          // className={
+          //   path !== '/' &&
           //   path.match(new RegExp('/' + '(.*)' + '/'))[1] === 'contact'
           //     ? `${navbarStyles.active}`
           //     : null
