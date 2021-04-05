@@ -58,7 +58,7 @@ const Navbar = ({ path }) => {
           // }
           >
             <Link>
-            <a href="https://francisco-costa-personal-website.s3-eu-west-1.amazonaws.com/Francisco_Costa_CV.pdf" target="_blank">CV</a></Link>
+            <a href="https://francisco-costa-personal-website.s3-eu-west-1.amazonaws.com/Francisco_Costa_CV+(2).pdf" target="_blank">CV</a></Link>
           </li>
           <li
           // className={
